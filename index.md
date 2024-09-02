@@ -20,7 +20,7 @@ He has presented [his research outcomes](https://scholar.google.co.kr/citations?
 ## Contact
 
 ```
-Affiliation: Engineering Risk Analysis (ERA) Group, School of Engineering and Design, Technical University of Munich
-Office: Engineering Risk Analysis Group, Technische Universität München, 80290 München, Germany
+Affiliation: Engineering Risk Analysis Group, School of Engineering and Design, Technical University of Munich
+Office: Theresienstraße 90, N3624, 80333 München, Germany
 Email: idongkr[at]gmail.com
 ```
