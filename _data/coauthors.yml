@@ -2,6 +2,14 @@
   - firstname: ["Junho", "J."]
     url: https://systemreliability.wordpress.com/junhosong/
 
+"lee":
+  - firstname: ["Young-Joo", "Y.J.", "Y.-J."]
+    url: https://ylee.unist.ac.kr/professor/
+
+"byun":
+  - firstname: ["Ji-Eun", "JE.", "J.E.", "J.-E."]
+    url: https://jieunbyun.github.io/
+
 "straub":
   - firstname: ["Daniel", "D."]
     url: https://www.cee.ed.tum.de/era/team/daniel-straub/
