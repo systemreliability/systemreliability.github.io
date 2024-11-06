@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Technical University of Munich</a>. postdoctoral researcher.
+subtitle: <a href='#'>Technical University of Munich</a>. Postdoctoral Researcher.
 
 profile:
   align: right
   image: pic_Lee.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Theresienstraße 90</p>
+    <p>N3624, 80333</p>
+    <p>München, Germany</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
