@@ -18,8 +18,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+**Dr. Dongkyu Lee** is a **Postdoctoral researcher** at TUM ([Technical University of Munich](https://www.tum.de/en/)). He received his B.S. and Ph.D. in Civil & Environmental Engineering from SNU ([Seoul National University](https://en.snu.ac.kr/)). 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+He has a broad academical background in graph theory, deep reinforcement learning, Bayesian network, variance reduction techniques (importance sampling, subset simulation, ...), etc. He is interested in: 
+- Reliability analysis of urban systems/networks under seismic uncertainties
+- Risk-informed maintenance strategies for lifeline networks
+- Application of statistical/machine learning techniques for urban infrastructure systems
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+He has presented [his research outcomes](https://dklee.kro.kr/publications/) through 3 articles in peer-reviewed journals (and 2 articles under review), and 21 conference/workshop presentations (7 domestic, 14 international).
