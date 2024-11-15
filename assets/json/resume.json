@@ -39,30 +39,28 @@
       "institution": "Seoul National University, Seoul, South Korea",
       "location": "Seoul, South Korea",
       "url": "https://en.snu.ac.kr/index.html",
-      "area": "Structural engineering",
+      "area": "Structural Engineering",
       "studyType": "Ph.D.",
       "startDate": "2017-09-01",
       "endDate": "2023-08-31"
     },
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "institution": "Seoul National University, Seoul, South Korea",
+      "location": "Seoul, South Korea",
+      "url": "https://cee.snu.ac.kr/",
+      "area": "Civil and Environmental Engineering",
+      "studyType": "B.S.",
+      "startDate": "2012-03-01",
+      "endDate": "2016-08-31"
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Postdoctoral Fellowship Program (Nurturing next-generation researchers)",
+      "date": "2024-09-01",
+      "awarder": "National Research Foundation of Korea (NRF)",
+      "url": "https://www.nrf.re.kr/",
+      "summary": "This fellowship program is awarded to outstanding early career Ph.D. researchers."
     }
   ],
   "publications": [
