@@ -1,114 +1,131 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Dongkyu Lee",
+    "label": "Postdoctoral Researcher",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "dongkyu.lee@tum.de",
+    "phone": "(+49) 89 289 25406",
+    "url": "https://systemreliability.github.io/",
+    "summary": "A Korean-born civil engineer",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "Theresienstr. 90",
+      "postalCode": "80333",
+      "city": "Munich",
+      "countryCode": "DE",
+      "region": "Bayern"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "Instagram",
+        "username": "dongkyuleeeee",
+        "url": "https://www.instagram.com/dongkyuleeeee/"
       }
     ]
   },
-  "work": [
+  "Experience": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
+      "name": "Engineering Risk Analysis Group, Technical University of Munich, Munich, Germany",
+      "position": "Postdoctoral Researcher",
+      "url": "https://www.cee.ed.tum.de/era/team/dongkyu-lee/",
+      "startDate": "2024",
+      "endDate": "2025",
+      "summary": "Deep reinforcement learning-based optimal maintenance strategy for large-scale infrastructure networks under seismic risk",
+      "highlights": ["Deep Reinforcement Learning"]
+    },
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "Institute of Construction and Environmental Engineering, Seoul National University, Seoul, South Korea",
+      "position": "Postdoctoral Researcher",
+      "url": "https://icee.snu.ac.kr/",
+      "startDate": "2023",
+      "endDate": "2024",
+      "summary": "Network reliability analysis using Bayesian network",
+      "highlights": ["Bayesian Networks"]
+    },
+    {
+      "name": "Princeton University, Princeton, New Jersey, USA",
+      "position": "Visiting Researcher",
+      "url": "https://cis.scholar.princeton.edu/people/dongkyu-lee",
+      "startDate": "2023",
+      "endDate": "2023",
+    },
+    {
+      "name": "University of California at Berkeley, Berkeley, California, USA",
+      "position": "Visiting Researcher",
+      "url": "https://coezresearch.wpenginepowered.com/99-2/",
+      "startDate": "2022",
+      "endDate": "2023",
+      "summary": "Brain Korea 21 Global Joint Research for Graduate Students",
+      "highlights": ["Full financial support from Ministry of Education, Korea"]
+    },
+    {
+      "name": "University of Illinois at Urbana-Champaign, Champaign, Illinois, USA",
+      "position": "Visiting Researcher",
+      "url": "https://www.ncsa.illinois.edu/",
+      "startDate": "2019",
+      "endDate": "2020",
+      "summary": "Engineering Development Research Center (EDRC) research intern program",
+      "highlights": ["Full financial support from Ministry of Trade, Industry and Energy, Korea"]
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "institution": "Seoul National University, Seoul, South Korea",
+      "location": "Seoul, South Korea",
+      "url": "https://en.snu.ac.kr/index.html",
+      "area": "Civil & Environmental Engineering",
+      "studyType": "M.S./Ph.D.",
+      "startDate": "2017",
+      "endDate": "2023",
+      "courses": ["Dissertation: Development of seismic reliability analysis methods for large-scale infrastructure networks"]
+    },
+    {
+      "institution": "Seoul National University, Seoul, South Korea",
+      "location": "Seoul, South Korea",
+      "url": "https://en.snu.ac.kr/index.html",
+      "area": "Civil & Environmental Engineering",
+      "studyType": "B.S.",
+      "startDate": "2012",
+      "endDate": "2016",
+      "courses": ["Cum Laude"]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Postdoctoral Fellowship Program (Nurturing next-generation researchers)",
+      "date": "2024-09-01",
+      "awarder": "National Research Foundation of Korea (NRF)",
+      "summary": "The fellowship is awarded for aspiring scholars by the Korean government."
+    },
+    {
+      "title": "Brain Korea 21 Global Joint Research Fellowship for Graduate Students",
+      "date": "2022-11-01",
+      "awarder": "Ministry of Education, Korea",
+      "summary": "The fellowship is awarded for outstanding graduate students to study abroad by the Korean government."
+    },
+    {
+      "title": "World Top-tier Program Award",
+      "date": "2022-09-01",
+      "awarder": "Engineering Development Research Center, Seoul National University",
     }
   ],
-  "certificates": [
+  "honors": [
     {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
+      "name": "Graduated with Honor, B.S. (Cum Laude)",
+      "date": "2016-08-29",
+      "issuer": "Seoul National University",
       "icon": "fa-solid fa-location-dot"
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
+      "name": "Soo-Am Scholarship",
+      "date": "2018-2020",
+      "issuer": "Soo-Am Education & Cultural Foundation",
       "icon": "fa-solid fa-tag"
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
+      "name": "Brain Korea 21 Scholarship",
+      "date": "2021-2022",
+      "issuer": "Ministry of Education, Korea",
       "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
     }
   ],
   "publications": [
@@ -136,22 +153,31 @@
   ],
   "skills": [
     {
-      "name": "Physics",
+      "name": "MATLAB",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Graph Theory",
+        "Importance Sampling",
+        "Bayesian Networks",
+        "Subset Simulation"
+      ]
+    },
+    {
+      "name": "Python",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "Graph Theory",
+        "Importance Sampling",
+        "Bayesian Networks",
+        "Subset Simulation"
       ]
     }
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "Korean",
       "fluency": "Native speaker",
       "icon": ""
     },
@@ -163,37 +189,39 @@
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "Network reliability analysis",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Graph Theory",
+        "Importance Sampling",
+        "Bayesian Networks",
+        "Lifeline Networks"
       ]
     }
-  ],
-  "references": [
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
+      "name": "Risk-informed maintenance strategy",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Maintenance Strategy",
+        "Reinforcement Learning"
+      ]
+    }
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Application of statistical/machine learning techniques",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Statistical Learning",
+        "Machine Learning"
+      ]
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
+      "name": "Deep reinforcement learning-based optimal maintenance strategy for large-scale infrastructure networks under seismic risk",
+      "summary": "Development of maintenance strategy scheduling using deep reinforcement learning",
+      "highlights": ["Deep Reinforcement Learning", "Infrastructure Networks"],
+      "startDate": "2024-09-01",
+      "endDate": "2025-08-31",
       "url": "https://example.com"
     }
   ]
