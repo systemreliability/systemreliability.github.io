@@ -11,7 +11,7 @@ profile:
   more_info: >
     <p>Theresienstraße 90, N3624</p>
     <p>80333, München, Germany</p>
-    <p>+49 89 289 25406</p>
+    <p>(+49) 89-289-25406</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
