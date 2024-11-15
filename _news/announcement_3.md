@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I joined the [Engineering Risk Analysis (ERA) Group](https://www.cee.ed.tum.de/era/era-group/) at Technical University of Munich, supported by National Research Foundation of Korea (NRF).
+I joined the [Engineering Risk Analysis Group](https://www.cee.ed.tum.de/era/era-group/) at Technical University of Munich, supported by National Research Foundation of Korea (NRF).
