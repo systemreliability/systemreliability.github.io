@@ -120,14 +120,14 @@
   "publications": [
     {
       "name": "Multi‐scale seismic reliability assessment of networks by centrality‐based selective recursive decomposition algorithm",
-      "publisher": "Wiley Online Library",
+      "publisher": "Earthquake Engineering & Structural Dynamics",
       "releaseDate": "2021-05-19",
       "url": "https://doi.org/10.1002/eqe.3447",
       "summary": "A new algorithm utilizing network centrality, termed “centrality-based selective recursive decomposition algorithm” (CS-RDA), is introduced. By preferentially decomposing the node which is most likely to belong to the min-cut identified based on the betweenness centrality, the convergence of the bounds on the O/D connectivity can be expedited significantly."
     },
     {
       "name": "Risk-informed operation and maintenance of complex lifeline systems using parallelized multi-agent deep Q-network",
-      "publisher": "Elsevier",
+      "publisher": "Reliability Engineering & System Safety",
       "releaseDate": "2023-07-17",
       "url": "https://doi.org/10.1016/j.ress.2023.109512",
       "summary": "A multi-agent deep reinforcement learning framework, termed parallelized multi-agent deep Q-network (PM-DQN), is proposed to overcome the curse of dimensionality. The proposed method takes a divide-and-conquer strategy, in which multiple subsystems are identified by community detection, and each agent learns to achieve the O&M policy of the corresponding subsystem."
