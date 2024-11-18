@@ -44,8 +44,8 @@
       "highlights": ["Advisor: Prof. Junho Song"]
     },
     {
-      "name": "Complex Infrastructure Systems, Princeton University",
-      "location": "New Jersey, USA",
+      "name": "Princeton University, Princeton",
+      "location": "NJ, USA",
       "position": "Visiting Researcher",
       "url": "https://cis.scholar.princeton.edu/people/dongkyu-lee",
       "startDate": "2023-10-01",
@@ -54,8 +54,8 @@
       "highlights": ["Hosting: Prof. Jürgen Hackl"]
     },
     {
-      "name": "Department of Civil and Environmental Engineering, University of California, Berkeley",
-      "location": "California, USA",
+      "name": "University of California, Berkeley, Berkeley",
+      "location": "CA, USA",
       "position": "Visiting Researcher",
       "url": "https://coezresearch.wpenginepowered.com/99-2/",
       "startDate": "2022-11-01",
@@ -64,8 +64,8 @@
       "highlights": ["Advisor: Prof. Ziqi Wang"]
     },
     {
-      "name": "National Center for Supercomputing Applications, University of Illinois Urbana-Champaign",
-      "location": "Illinois, USA",
+      "name": "University of Illinois Urbana-Champaign, Champaign",
+      "location": "IL, USA",
       "position": "Visiting Researcher",
       "url": "https://experts.illinois.edu/en/persons/jong-sung-lee",
       "startDate": "2019-12-23",
@@ -97,7 +97,7 @@
   "awards": [
     {
       "title": "Postdoctoral Fellowship Program (Nurturing next-generation researchers)",
-      "date": "2024-09-01",
+      "date": "2024",
       "awarder": "Full financial support from National Research Foundation of Korea (NRF)",
       "url": "https://www.nrf.re.kr/",
       "summary": "Awarded to outstanding early career Ph.D. researchers."
