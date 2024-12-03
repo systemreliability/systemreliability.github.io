@@ -4,7 +4,7 @@ title: project 1
 description: with background image
 img: assets/img/Fig1.jpg
 importance: 1
-category: ongoing
+category: Ongoing
 related_publications: true
 ---
 
