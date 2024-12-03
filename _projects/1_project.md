@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Optimal maintenance strategy for large-scale infrastructure networks under seismic risk
-description: Funding: National Research Foundation of Korea (NRF)
+description: Funding':' National Research Foundation of Korea (NRF)
 img: assets/img/Fig1.jpg
 importance: 1
 category: Ongoing
