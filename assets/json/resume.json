@@ -147,9 +147,10 @@
       "icon": "fa-solid fa-hashtag",
       "keywords": [
         "Graph Theory",
-        "Community Detection",
-        "Network Reliability",
-        "Network Resilience"
+        "Bayesian Network",
+        "Junction Tree",
+        "Importance Sampling",
+        "Subset Simulatoin"
       ]
     }
   ],
@@ -167,15 +168,13 @@
   ],
   "interests": [
     {
-      "name": "Network Reliability",
+      "name": "Network Resilience",
       "icon": "fa-solid fa-tag",
       "keywords": [
         "Uncertainty Quantification",
-        "Recursive Decomposition Algorithm",
-        "Bayesian Network",
-        "Junction Tree",
-        "Importance Sampling",
-        "Subset Simulatoin"
+        "Network Reliability Analysis",
+        "Decision-making for Risk-informed Maintenance",
+        "Application of Statistical/Machine Learning Techniques"
       ]
     }
   ],
