@@ -2,7 +2,7 @@
 layout: page
 title: Optimal maintenance strategy under seismic risk
 description: Funded by National Research Foundation of Korea (NRF)
-img: assets/img/Fig1.jpg
+img: assets/img/Fig1.png
 importance: 2
 category: Ongoing
 giscus_comments: true
