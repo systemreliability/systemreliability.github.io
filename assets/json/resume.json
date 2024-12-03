@@ -142,18 +142,25 @@
   ],
   "skills": [
     {
-      "name": "Physics",
+      "name": "Network Science",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Graph Theory",
+        "Community Detection",
+        "Network Reliability",
+        "Network Resilience"
       ]
-    }
+    },
+    {
+      "name": "Earthquake Engineering",
+      "level": "Master",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Seismic Reliability",
+        "Probabilistic Seismic Hazard Analysis"
+      ]
+    },
   ],
   "languages": [
     {
@@ -169,15 +176,15 @@
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "Network Reliability",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Uncertainty Quantification",
+        "Recursive Decomposition Algorithm",
+        "Bayesian Network",
+        "Junction Tree",
+        "Importance Sampling",
+        "Subset Simulatoin"
       ]
     }
   ],
