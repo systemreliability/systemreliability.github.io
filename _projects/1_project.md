@@ -4,7 +4,7 @@ title: Postdoctoral Fellowship Program
 description: Nurturing next-generation researchers
 img: assets/img/Fig1.png
 importance: 4
-category: fun
+category: Ongoing
 ---
 
 Every project has a beautiful feature showcase page.
