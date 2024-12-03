@@ -8,7 +8,7 @@ category: Ongoing
 related_publications: true
 ---
 
-Funding: This project is funded by the Postdoctoral Fellowship Program (nurturing next-generation researchers), supported by National Research Foundation of Korea (NRF).
+This project is funded by the Postdoctoral Fellowship Program (nurturing next-generation researchers), supported by National Research Foundation of Korea (NRF).
 
 Infrastructure networks, such as transportation, gas, and electricity networks, are the backbone of modern society. These networks face natural hazards that are intensifying with climate change. The reliability and operability after a disaster directly impact public safety and have significant socio-economic consequences. Despite growing risks from natural and man-made hazards, the budget allocated to maintaining these networks is insufficient to ensure their robustness. Furthermore, there is a lack of comprehensive research on the optimal trade-off between the risks and budgetary limitations. Most infrastructure network maintenance policies solely address deterioration-related failures, ignoring the risk assessment related to natural disasters. As a result, infrastructure networks are vulnerable to unforeseen disasters, which can cause catastrophic damage. To make appropriate maintenance decisions and budget allocations for sustainable infrastructure, it is imperative to not only assess network reliability accurately but also to identify optimal network-level maintenance options to minimize the potential risk of disaster.
 
