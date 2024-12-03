@@ -1,24 +1,81 @@
 ---
 layout: page
-title: Optimal maintenance strategy for networks under seismic risk
-description: Funded by National Research Foundation of Korea (NRF)
-img: assets/img/Fig1.jpg
-importance: 1
+title: project 2
+description: a project with a background image and giscus comments
+img: assets/img/3.jpg
+importance: 2
 category: Ongoing
-related_publications: false
+giscus_comments: true
 ---
 
-Infrastructure networks, such as transportation, gas, and electricity networks, are the backbone of modern society. These networks face natural hazards that are intensifying with climate change. The reliability and operability after a disaster directly impact public safety and have significant socio-economic consequences. Despite growing risks from natural and man-made hazards, the budget allocated to maintaining these networks is insufficient to ensure their robustness. Furthermore, there is a lack of comprehensive research on the optimal trade-off between the risks and budgetary limitations. Most infrastructure network maintenance policies solely address deterioration-related failures, ignoring the risk assessment related to natural disasters. As a result, infrastructure networks are vulnerable to unforeseen disasters, which can cause catastrophic damage. To make appropriate maintenance decisions and budget allocations for sustainable infrastructure, it is imperative to not only assess network reliability accurately but also to identify optimal network-level maintenance options to minimize the potential risk of disaster.
+Every project has a beautiful feature showcase page.
+It's easy to include images in a flexible 3-column grid format.
+Make your photos 1/3, 2/3, or full width.
 
-The proposed research aims to develop methods and algorithms for optimizing network maintenance policies over their lifetimes by considering the risk of natural disasters, specifically earthquakes. The key question is how to effectively overcome combinatorial explosions while minimizing efficiency losses. This general goal translates into the following specific research objectives: (1) to develop optimal sequential decision-making for managing infrastructure networks under potential seismic risk; (2) to devise a multi-agent reinforcement learning-based network maintenance policy with hierarchical network modeling, which is applicable to large-scale networks; and (3) to test and demonstrate the application of both developed methodologies on real-world infrastructure networks. Objective 1 is approached with advanced sampling techniques to accurately quantify seismic risk for optimal policies, objective 2 by a combination of hierarchically modeled networks with MARL for high scalability with respect to network size. For the hierarchical network modeling, a network simplification approach will be adopted to decrease the computational complexity to a more manageable level. Consequently, this research will contribute to a more “hazard-resilient” society by addressing risks and uncertainties in maintenance planning and streamlining civil infrastructure management budgets.
+To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+
+    ---
+    layout: page
+    title: project
+    description: a project with a background image
+    img: /assets/img/12.jpg
+    ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Fig1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Schematic structure of the optimal sequential decision-making.
+    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    This image can also have a caption. It's like magic.
+</div>
+
+You can also put regular text between your rows of images.
+Say you wanted to write a little bit about your project before you posted the rest of the images.
+You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    You can also have artistically styled 2/3 + 1/3 images, like these.
+</div>
+
+The code is simple.
+Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
+To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
+Here's the code for the last row of images above:
+
+{% raw %}
+
+```html
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm-4 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+```
 
 {% endraw %}
