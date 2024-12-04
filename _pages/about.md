@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Technical University of Munich. [Postdoctoral Researcher](https://dongkyu-lee.kro.kr).
+subtitle: Technical University of Munich. Postdoctoral Researcher.
 
 profile:
   align: right
