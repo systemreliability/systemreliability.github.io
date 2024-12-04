@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Technical University of Munich</a>. Postdoctoral Researcher.
+subtitle: Technical University of Munich. [Postdoctoral Researcher](https://dongkyu-lee.kro.kr).
 
 profile:
   align: right
