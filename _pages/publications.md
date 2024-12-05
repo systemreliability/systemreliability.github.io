@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Archival Journals & Proceedings of Conferences.
+description: Thesis, Archival Journals & Proceedings of Conferences.
 nav: true
 nav_order: 3
 ---
