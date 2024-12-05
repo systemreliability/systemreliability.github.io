@@ -2,11 +2,7 @@
   - firstname: ["Junho", "J."]
     url: https://systemreliability.wordpress.com/junhosong/
 
-"dlee":
-  - firstname: ["Dongkyu", "D."]
-    url: https://dongkyu-lee.kro.kr/
-
-"ylee":
+"lee":
   - firstname: ["Young-Joo", "Y.J.", "Y.-J."]
     url: https://ylee.unist.ac.kr/professor/
 
@@ -21,7 +17,3 @@
 "wang":
   - firstname: ["Ziqi", "Z."]
     url: https://ce.berkeley.edu/people/faculty/ziqiwang
-    
-"jlee":
-  - firstname: ["Jong", "Jong Sung", "J. S."]
-    url: https://experts.illinois.edu/en/persons/jong-sung-lee
