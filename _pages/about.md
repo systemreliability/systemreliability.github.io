@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Engineering Risk Analysis (ERA) Group, Technical University of Munich. Postdoctoral Researcher.
+subtitle: Engineering Risk Analysis Group, Technical University of Munich. Postdoctoral Researcher.
 
 profile:
   align: right
