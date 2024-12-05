@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Postdoctoral Researcher</a>. Technical University of Munich.
+subtitle: <a href='#'>Postdoctoral Researcher</a>. Engineering Risk Analysis Group, Technical University of Munich.
 
 profile:
   align: right
