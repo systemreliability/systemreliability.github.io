@@ -10,7 +10,7 @@ email: dongkyu.lee@tum.de
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
-  Last updated: November 15, 2024.
+  Last updated: December 5, 2024.
 keywords: jekyll # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -111,7 +111,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-  Please do not hesitate to contact me by e-mail if you have any queries.
+  Please contact me by e-mail if you have any queries.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
