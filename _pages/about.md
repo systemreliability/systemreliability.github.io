@@ -9,7 +9,7 @@ profile:
   image: pic_Lee.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p">Theresienstraße 90, N3624</p>
+    <p>Theresienstraße 90, N3624</p>
     <p>80333, München, Germany</p>
     <p>(+49) 89-289-25406</p>
 
