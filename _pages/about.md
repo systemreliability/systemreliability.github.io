@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Postdoctoral Researcher</a>. <a href="https://www.cee.ed.tum.de/era/era-group/"> Engineering Risk Analysis Group</a>, <a href="https://www.tum.de/en/"> Technical University of Munich</a>.
+subtitle: Postdoctoral Researcher. <a href="https://www.cee.ed.tum.de/era/era-group/"> Engineering Risk Analysis Group</a>, <a href="https://www.tum.de/en/"> Technical University of Munich</a>.
 
 profile:
   align: right
