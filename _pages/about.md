@@ -2,14 +2,14 @@
 layout: about
 title: About
 permalink: /
-subtitle: Technical University of Munich. Postdoctoral Researcher.
+subtitle: Engineering Risk Analysis (ERA) Group, Technical University of Munich. Postdoctoral Researcher.
 
 profile:
   align: right
   image: pic_Lee.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p style="text-align: center;">Theresienstraße 90, N3624</p>
+    <p">Theresienstraße 90, N3624</p>
     <p>80333, München, Germany</p>
     <p>(+49) 89-289-25406</p>
 
