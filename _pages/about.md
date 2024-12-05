@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Technical University of Munich. Postdoctoral Researcher.
+subtitle: <a href='#'>Postdoctoral Researcher</a>. Technical University of Munich.
 
 profile:
   align: right
@@ -18,9 +18,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-**Dr. Dongkyu Lee** is a **Postdoctoral researcher** at TUM ([Technical University of Munich](https://www.tum.de/en/)). He received his B.S. and Ph.D. in Civil & Environmental Engineering from SNU ([Seoul National University](https://en.snu.ac.kr/)). 
+**Dr. Dongkyu Lee** is a **Postdoctoral researcher** at [Technical University of Munich](https://www.tum.de/en/) (TUM). He received his B.S. and Ph.D. in Civil & Environmental Engineering from [Seoul National University](https://en.snu.ac.kr/) (SNU). 
 
-He has a broad academical background in graph theory, deep reinforcement learning, Bayesian network, variance reduction techniques (importance sampling, subset simulation, ...), etc. He is interested in: 
+He has a broad academical background in graph theory, deep reinforcement learning, Bayesian network, variance-reduction techniques (importance sampling, subset simulation, ...), etc. He is interested in: 
 - Reliability analysis of urban systems/networks under seismic uncertainties
 - Risk-informed maintenance strategies for lifeline networks
 - Application of statistical/machine learning techniques for urban infrastructure systems
