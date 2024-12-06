@@ -6,5 +6,5 @@ nav: true
 nav_order: 2
 description: 
 toc:
-  sidebar: left
+  sidebar: right
 ---
