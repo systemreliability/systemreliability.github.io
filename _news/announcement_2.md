@@ -1,13 +1,12 @@
 ---
 layout: post
 title: I've successfully completed my Ph.D.
-date: 2023-08-29 16:00:00-0400
+date: 2023-06-28 16:00:00-0400
 inline: false
 related_posts: false
 ---
 
-Today, I've successfully completed my Ph.D!
-
+Today, I've successfully defended defenced my Ph.D thesis!
 ---
 
 #### Ph.D. Thesis Contents
