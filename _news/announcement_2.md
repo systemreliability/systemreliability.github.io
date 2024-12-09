@@ -6,7 +6,7 @@ inline: false
 related_posts: false
 ---
 
-Today, I've successfully defended my Ph.D thesis!
+I successfully defended my doctoral dissertation today!
 ---
 
 #### Ph.D. Thesis Contents
