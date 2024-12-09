@@ -6,10 +6,11 @@ inline: false
 related_posts: false
 ---
 
-I successfully defended my doctoral dissertation today!
+# I successfully defended my doctoral dissertation today!
+
 ---
 
-#### Ph.D. Thesis Contents
+### The contents of the Ph.D. dissertation are as follows:
 
 <ul>
     <li>Chapter 1. Introduction</li>
