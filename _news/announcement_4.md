@@ -6,6 +6,6 @@ inline: false
 related_posts: false
 ---
 
-# Details of the work at NCSA
+## Details of the work at NCSA
 
 Mr. Youngjun Kwon and I visited the NCSA, and studied about the ongoing research of the institution, called [Interdependent Networked Community Resilience Modeling Environment](https://incore.ncsa.illinois.edu/) (IN-CORE), by Dr. Jong Lee.
