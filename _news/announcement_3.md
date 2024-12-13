@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I joined the [Engineering Risk Analysis Group](https://www.cee.ed.tum.de/era/era-group/) (ERA) at TUM as a postdoctoral fellow.
+I joined the [Engineering Risk Analysis Group](https://www.cee.ed.tum.de/era/era-group/) (ERA) at TUM as a postdoctoral researcher.
