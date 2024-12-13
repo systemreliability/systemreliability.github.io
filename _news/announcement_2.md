@@ -6,7 +6,7 @@ inline: false
 related_posts: false
 ---
 
-# I successfully defended my doctoral dissertation today!
+## I successfully defended my doctoral dissertation today!
 
 ---
 
