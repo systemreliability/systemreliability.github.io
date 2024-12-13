@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I joined the [Structural System Reliability Group](https://systemreliability.wordpress.com/) at SNU.
+I joined the [Structural System Reliability Group](https://systemreliability.wordpress.com/) (SSRG) at SNU.
