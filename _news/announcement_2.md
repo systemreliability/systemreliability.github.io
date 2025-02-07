@@ -10,7 +10,7 @@ related_posts: false
 
 ---
 
-### The contents of the Ph.D. dissertation are as follows:
+### The contents of the Ph.D. dissertation {% cite lee2023development %} are as follows:
 
 <ul>
     <li>Chapter 1. Introduction</li>
