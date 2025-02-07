@@ -24,3 +24,11 @@ related_posts: false
 
 > [Lee, D. (2023). Development of Seismic Reliability Analysis Methods for Large-scale Infrastructure Networks. (Doctoral dissertation, Seoul National University).
 ](https://s-space.snu.ac.kr/handle/10371/196249)
+
+---
+{% include figure.liquid loading="eager" path="assets/img/news4_3.png" title="example image" class="img-fluid rounded z-depth-1" %}
+(a) Overview of proposed methods
+{% include figure.liquid loading="eager" path="assets/img/news4_1.png" title="example image" class="img-fluid rounded z-depth-1" %}
+(b) Diagram of main contribution and findings
+{% include figure.liquid loading="eager" path="assets/img/news4_2.png" title="example image" class="img-fluid rounded z-depth-1" %}
+(c) Trade-off between accuracy and scalability in proposed methods
