@@ -26,6 +26,7 @@ related_posts: false
 ](https://s-space.snu.ac.kr/handle/10371/196249)
 
 ---
+
 {% include figure.liquid loading="eager" path="assets/img/news4_3.png" title="example image" class="img-fluid rounded z-depth-1" %}
 (a) Overview of proposed methods
 {% include figure.liquid loading="eager" path="assets/img/news4_1.png" title="example image" class="img-fluid rounded z-depth-1" %}
