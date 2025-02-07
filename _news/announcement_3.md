@@ -9,8 +9,9 @@ related_posts: false
 ## Details of the work at University of California, Berkeley (UC Berkeley)
 
 I have started my 3-month-long visiting research at UC Berkeley, USA, supported by Brain Korea 21 Global Research Fellowship (Ministry of Education, South Korea).
-During my stay at UC Berkeley, I will try research collaborations with my host, [Prof. Ziqi Wang](https://coezresearch.wpenginepowered.com/).
-The first step is the development of a new sampling-based reliability analysis method for complex infrastructure networks.
+During my stay at UC Berkeley, I try research collaborations with my host, [Prof. Ziqi Wang](https://coezresearch.wpenginepowered.com/).
+
+As the first step, we developed a new advanced-sampling-based method for reliability analysis of complex infrastructure networks.
 
 ---
 
