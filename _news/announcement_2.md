@@ -16,7 +16,7 @@ During the visit, we studied the ongoing research of the institution, called [In
 Seismic Damage Analysis in Seoul, S. Korea
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="col-sm-6.5 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/news1_1.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-5 mt-3 mt-md-0">
@@ -24,7 +24,7 @@ Seismic Damage Analysis in Seoul, S. Korea
     </div>
 </div>
 <div class="caption">
-    (a) Information attributes of the buildings in target area; (b) Spatial distribution of the building failure probabilities (return period: 1,000 years)
+    (a) Buildings in the target area; and (b) spatial distribution of the buildings' seismic failure probabilities (return period: 1,000 years)
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -32,5 +32,5 @@ Seismic Damage Analysis in Seoul, S. Korea
     </div>
 </div>
 <div class="caption">
-    Building failure probability distributions according to return periods
+    Distribution of building failure probabilities according to earthquake's return periods
 </div>
