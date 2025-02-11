@@ -27,15 +27,27 @@ related_posts: false
 
 ---
 
-{% include figure.liquid loading="eager" path="assets/img/news4_3.png" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/news4_3.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <div class="caption">
     (a) Overview of proposed methods
 </div>
-{% include figure.liquid loading="eager" path="assets/img/news4_1.png" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/news4_1.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <div class="caption">
     (b) Diagram of main contribution and findings
 </div>
-{% include figure.liquid loading="eager" path="assets/img/news4_2.png" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/news4_2.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <div class="caption">
     (c) Trade-off between accuracy and scalability in proposed methods
 </div>
