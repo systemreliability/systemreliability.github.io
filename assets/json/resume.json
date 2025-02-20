@@ -134,9 +134,9 @@
     },
     {
       "name": "Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation",
-      "publisher": "arXiv preprint",
-      "releaseDate": "2023",
-      "url": "https://arxiv.org/abs/2310.10232",
+      "publisher": "Reliability Engineering & System Safety",
+      "releaseDate": "2025",
+      "url": "https://doi.org/10.1016/j.ress.2025.110947",
       "summary": "The binary network limit-state function in the subset simulation is reformulated into more informative piecewise continuous functions. The proposed limit-state functions quantify the proximity of each sample to a potential network failure domain, thereby enabling the construction of specialized intermediate failure events, which can be utilized in subset simulation and other sequential Monte Carlo approaches."
     }
   ],
