@@ -133,6 +133,13 @@
       "summary": "A multi-agent deep reinforcement learning framework, termed parallelized multi-agent deep Q-network (PM-DQN), is proposed to overcome the curse of dimensionality. The proposed method takes a divide-and-conquer strategy, in which multiple subsystems are identified by community detection, and each agent learns to achieve the O&M policy of the corresponding subsystem."
     },
     {
+      "name": "Dual graph-based Bayesian network modeling with Rao-Blackwellization for seismic reliability and complexity quantification of network connectivity",
+      "publisher": "Earthquake Engineering & Structural Dynamics",
+      "releaseDate": "2025",
+      "url": "",
+      "summary": "Modern societies depend on various lifeline networks such as transportation, electricity, and gas distribution systems, which are vulnerable to seismic events. Although numerous analytical and simulation-based methods have been developed for efficient seismic system reliability analysis (SRA), dealing with high-dimensional events arising from large-scale infrastructure networks remains challenging. To address this challenge, this paper proposes a system reliability method that efficiently computes the connectivity of directed graphs. The method employs the dual graph representation of a target system to automate the construction of a Bayesian network (BN). This enables the application of the junction tree algorithm, a well-established BN inference method, to perform reliability analysis and quantify complexity based on a network topology. The paper further tackles SRA challenges associated with fully correlated seismic uncertainties, which typically lead to a significant increase in computational complexity. To this end, we propose to combine a cross entropy-based adaptive importance sampling technique with Rao-Blackwellization. Thereby, sampling methods and exact analytical inference can be effectively combined to improve computational efficiency for seismic SRA of lifeline networks. The proposed methods are demonstrated through three numerical examples."
+    },
+    {
       "name": "Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation",
       "publisher": "Reliability Engineering & System Safety",
       "releaseDate": "2025",
