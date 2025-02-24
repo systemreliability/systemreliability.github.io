@@ -25,4 +25,4 @@ He has a broad academical background in graph theory, deep reinforcement learnin
 - Risk-informed maintenance strategies for lifeline networks
 - Application of statistical/machine learning techniques for urban infrastructure systems
 
-He has presented [his research outcomes](https://dongkyu-lee.kro.kr/publications/) through 4 articles in peer-reviewed journals (and 1 article under review), and 21 conference/workshop presentations (7 domestic, 14 international).
+He has presented [his research outcomes](https://dongkyu-lee.kro.kr/publications/) through 4 papers published in peer-reviewed archival journals (and 1 article under review), and 21 conference/workshop presentations (7 domestic, 14 international).
