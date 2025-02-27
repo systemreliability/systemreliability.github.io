@@ -11,9 +11,10 @@ related_posts: false
 Mr. Youngjun Kwon and I have started our two-month visiting research at University of Illinois Urbana-Champaign (UIUC) from Dec 23, 2019 to Feb 24, 2020, with the support of EDRC Research Intern Program (Ministry of Trade, Industry and Energy, S. Korea).
 During the visit, we are studying the ongoing research of the institution, called [Interdependent Networked Community Resilience Modeling Environment](https://incore.ncsa.illinois.edu/) (IN-CORE), with the help of Dr. Jong Lee and Chen Wang.
 
+
 ## Application
 
-Seismic Damage Analysis in Seoul, S. Korea
+Seismic damage analysis in Seoul, S. Korea
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-7 mt-3 mt-md-0">
