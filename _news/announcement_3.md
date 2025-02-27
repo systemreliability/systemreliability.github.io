@@ -27,7 +27,7 @@ This paper proposes two informative limit-state functions (LSFs) to reformulate 
     </div>
 </div>
 <div class="caption">
-    Samples obtained from the (a) entire domain; (b) first subset; and (c) second subset using $G_{OD}^{RP}$
+    Samples obtained from the (a) entire domain; (b) first subset; and (c) second subset using the most reliable path
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -35,7 +35,7 @@ This paper proposes two informative limit-state functions (LSFs) to reformulate 
     </div>
 </div>
 <div class="caption">
-    Samples obtained from the (a) entire domain; (b) first subset; and (c) second subset using $G_{OD}^{SP}$
+    Samples obtained from the (a) entire domain; (b) first subset; and (c) second subset using the shortest path
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
