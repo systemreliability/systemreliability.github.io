@@ -11,11 +11,11 @@ related_posts: false
 I have started my three-month visiting research program at UC Berkeley, USA, with the support of Brain Korea 21 Global Research Fellowship (Ministry of Education, South Korea).
 During my stay at UC Berkeley, I am trying to collaborate with the host, [Prof. Ziqi Wang](https://coezresearch.wpenginepowered.com/).
 
-As a first step, we have developed a new advanced sampling-based method for reliability analysis of complex infrastructure networks. The permanent link via DOI number of the paper is https://doi.org/10.1016/j.ress.2025.110947. The full reference information is as follows.
+As a first step, we have developed a new advanced sampling-based method for reliability analysis of complex infrastructure networks. The permanent link via DOI number of the paper is [HERE](https://doi.org/10.1016/j.ress.2025.110947). The full reference information is as follows.
 
 ---
 
-> _Lee, D., Wang, Z., & Song, J. (2025). [Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation](https://doi.org/10.1016/j.ress.2025.110947). Reliability Engineering & System Safety, 110947._
+> Lee, D., Wang, Z., & Song, J. (2025). [Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation](https://doi.org/10.1016/j.ress.2025.110947). _Reliability Engineering & System Safety_, 110947.
 
 
 This paper proposes two informative limit-state functions (LSFs) to reformulate the traditional binary LSF for two-terminal reliability analysis of lifeline networks, thereby making the application of subset simulation (SS) possible. The first LSF quantifies the vulnerability of the most reliable path between the origin and destination nodes, whereas the other utilizes the shortest path. Both LSF reformulations represent the same failure domain as the original binary limit-sate function, while their function values at the safe domain differ. Moreover, a specialized SS is developed to generate network-level fragility curves by connecting intermediate failure events to the earthquake magnitude. As a result, the specialized SS can generate the network fragility curve in a single run. Furthermore, the sampling framework is successfully extended to assess k-terminal or k-out-of-N reliability. The accuracy and efficiency of the proposed framework are tested and demonstrated by numerical examples using the Hamiltonian Monte Carlo-based SS (HMC-SS). The results confirm the accuracy and efficiency of the proposed network LSFs, compared to other simulation-based methods directly applicable to binary LSFs. The first LSF generally has higher accuracy, while the second requires lower computation time.
