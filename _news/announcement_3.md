@@ -19,3 +19,10 @@ As a first step, we have developed a new advanced sampling-based method for reli
 
 
 This paper proposes two informative limit-state functions (LSFs) to reformulate the traditional binary LSF for two-terminal reliability analysis of lifeline networks, thereby making the application of subset simulation (SS) possible. The first LSF quantifies the vulnerability of the most reliable path between the origin and destination nodes, whereas the other utilizes the shortest path. Both LSF reformulations represent the same failure domain as the original binary limit-sate function, while their function values at the safe domain differ. Moreover, a specialized SS is developed to generate network-level fragility curves by connecting intermediate failure events to the earthquake magnitude. As a result, the specialized SS can generate the network fragility curve in a single run. Furthermore, the sampling framework is successfully extended to assess k-terminal or k-out-of-N reliability. The accuracy and efficiency of the proposed framework are tested and demonstrated by numerical examples using the Hamiltonian Monte Carlo-based SS (HMC-SS). The results confirm the accuracy and efficiency of the proposed network LSFs, compared to other simulation-based methods directly applicable to binary LSFs. The first LSF generally has higher accuracy, while the second requires lower computation time.
+
+{% include figure.liquid loading="eager" path="assets/img/news3_1.png" title="example image" class="img-fluid rounded z-depth-1" %}
+Samples obtained from the (a) entire domain; (b) first subset; and (c) second subset using $G_{OD}^{RP}$
+{% include figure.liquid loading="eager" path="assets/img/news3_2.png" title="example image" class="img-fluid rounded z-depth-1" %}
+Samples obtained from the (a) entire domain; (b) first subset; and (c) second subset using $G_{OD}^{SP}$
+{% include figure.liquid loading="eager" path="assets/img/news3_3.png" title="example image" class="img-fluid rounded z-depth-1" %}
+(a) Comparison of generated seismic fragility curves of San Jose highway bridge network; and (b) multi-state network fragility curves obtained by specialized HMC-SS.
