@@ -22,8 +22,7 @@ related_posts: false
 
 ---
 
-> [Lee, D. (2023). Development of Seismic Reliability Analysis Methods for Large-scale Infrastructure Networks. (Doctoral dissertation, Seoul National University).
-](https://s-space.snu.ac.kr/handle/10371/196249)
+> Lee, D. (2023). [Development of Seismic Reliability Analysis Methods for Large-scale Infrastructure Networks](https://s-space.snu.ac.kr/handle/10371/196249). _Doctoral dissertation, Seoul National University_.
 
 ---
 
