@@ -15,7 +15,7 @@ As a first step, we have developed a new advanced sampling-based method for reli
 
 ---
 
-> Lee, D., Wang, Z., & Song, J. (2025). [Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation](https://doi.org/10.1016/j.ress.2025.110947). _Reliability Engineering & System Safety_, 110947.
+> Lee, D., Wang, Z., & Song, J. (2025). [Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation](https://doi.org/10.1016/j.ress.2025.110947). _Reliability Engineering & System Safety_, 260: 110947.
 
 ---
 
