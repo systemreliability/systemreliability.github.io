@@ -1,13 +1,3 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWBV17QWJF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SWBV17QWJF');
-</script>
-
 ---
 layout: about
 title: About
@@ -27,6 +17,16 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWBV17QWJF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWBV17QWJF');
+</script>
 
 **Dr. Dongkyu Lee** is a **Postdoctoral researcher** at [Technical University of Munich](https://www.tum.de/en/) (TUM). He received his B.S. and Ph.D. in Civil & Environmental Engineering from [Seoul National University](https://en.snu.ac.kr/) (SNU). 
 
