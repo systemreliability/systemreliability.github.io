@@ -9,7 +9,7 @@ related_posts: false
 ## Details of the work at National Center for Supercomputing Applications (NCSA)
 
 Youngjun Kwon and I have started our two-month research visit at the NCSA at the University of Illinois Urbana-Champaign (UIUC) from December 23, 2019 to February 24, 2020 with the support of the EDRC Research Intern Program (Ministry of Trade, Industry and Energy, S. Korea).
-During the visit, we are studying the ongoing research of the institution, called [Interdependent Networked Community Resilience Modeling Environment](https://incore.ncsa.illinois.edu/) (IN-CORE), with the help of Dr. Jong Lee and Chen Wang.
+During the visit, we study the ongoing research of the institution, called [Interdependent Networked Community Resilience Modeling Environment](https://incore.ncsa.illinois.edu/) (IN-CORE), with the help of Dr. Jong Lee and Chen Wang.
 
 
 ## Application
