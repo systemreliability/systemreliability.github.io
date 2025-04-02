@@ -12,7 +12,7 @@ The permanent link via DOI number of the paper is [https://doi.org/10.1016/j.re
 
 ---
 
-> Lee, D., Wang, Z., & Song, J. (2025). [Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation](https://doi.org/10.1016/j.ress.2025.110947). _Reliability Engineering & System Safety_, 260: 110947.
+> Lee, D., Wang, Z., & Song, J. (2025). [Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation](https://doi.org/10.1016/j.ress.2025.110947). _Reliability Engineering & System Safety_, Vol. 260, 110947.
 
 ---
 
