@@ -13,7 +13,7 @@ Through the support by Seoul National University, the paper was published as an 
 
 ---
 
-> Lee, D., & J. Song (2023). [Risk-informed operation and maintenance of complex lifeline systems using parallelized multi-agent deep Q-network](https://doi.org/10.1016/j.ress.2023.109512). _Reliability Engineering & System Safety_. Vol. 239, 109512.
+> Lee, D., & Song, J. (2023). [Risk-informed operation and maintenance of complex lifeline systems using parallelized multi-agent deep Q-network](https://doi.org/10.1016/j.ress.2023.109512). _Reliability Engineering & System Safety_. Vol. 239, 109512.
 
 ---
 
