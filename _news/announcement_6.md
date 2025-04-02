@@ -3,7 +3,7 @@ layout: post
 title: New Publication - Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation
 date: 2025-02-18 16:30:00+0900
 inline: false
-related_posts: announcement_3
+related_posts: announcement_3.md
 ---
 
 A journal paper, titled “Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation” was recently published in _Reliability Engineering & System Safety_. The paper was co-authored by me, [Prof. Ziqi Wang](https://coezresearch.wpenginepowered.com/) (UC Berkeley), and [Prof. Junho Song](https://systemreliability.wordpress.com) (SSRG), thanks to the visiting research program with the support of Brain Korea 21 Global Research Fellowship (Ministry of Education, South Korea).
