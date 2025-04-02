@@ -1,6 +1,6 @@
 ---
 layout: post
-title: New Publication: Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation
+title: New Publication - Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation
 date: 2025-02-18 16:30:00+0900
 inline: false
 related_posts: announcement_3
