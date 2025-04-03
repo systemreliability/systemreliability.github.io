@@ -152,22 +152,13 @@
       "name": "Network Science",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Graph Theory",
-        "Community Identification",
-        "Clustering"
-      ]
+      "keywords": ["Graph Theory", "Community Identification", "Clustering"]
     },
     {
       "name": "Reliability Analysis",
       "level": "Master",
       "icon": "fa-solid fa-clipboard-check",
-      "keywords": [
-        "Bayesian Network",
-        "Junction Tree",
-        "Importance Sampling",
-        "Subset Simulatoin"
-      ]
+      "keywords": ["Bayesian Network", "Junction Tree", "Importance Sampling", "Subset Simulatoin"]
     }
   ],
   "languages": [
@@ -186,12 +177,7 @@
     {
       "name": "Network Resilience",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Uncertainty Quantification",
-        "Statistical/Machine Learning",
-        "Network Reliability Analysis",
-        "Risk-informed Maintenance Policy"
-      ]
+      "keywords": ["Uncertainty Quantification", "Statistical/Machine Learning", "Network Reliability Analysis", "Risk-informed Maintenance Policy"]
     }
   ],
   "projects": [
