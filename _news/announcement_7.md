@@ -6,7 +6,6 @@ inline: false
 related_posts: false
 ---
 
-
 A journal paper, titled “Risk-informed operation and maintenance of complex lifeline systems using parallelized multi-agent deep Q-network” was recently published in Reliability Engineering & System Safety. The paper was co-authored by me and [Prof. Junho Song](https://systemreliability.wordpress.com/).
 
 Through the support by Seoul National University, the paper was published as an Open Access article, and thus downloadable for free. The permanent link via DOI number of the paper is: [https://doi.org/10.1016/j.ress.2023.109512](https://doi.org/10.1016/j.ress.2023.109512). The full reference information is as follows.
