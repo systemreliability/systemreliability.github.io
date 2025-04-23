@@ -56,4 +56,9 @@ ninja.data = [{
           section: "News",},{id: "news-i-joined-the-engineering-risk-analysis-group-era-at-tum-as-a-postdoctoral-researcher",
           title: 'I joined the Engineering Risk Analysis Group (ERA) at TUM as a postdoctoral...',
           description: "",
-          section: "News",},];
+          section: "News",},{id: "projects-postdoctoral-fellowship-program",
+          title: 'Postdoctoral Fellowship Program',
+          description: "Deep reinforcement learning-based optimal maintenance strategy for large-scale infrastructure networks under seismic risk",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},];
