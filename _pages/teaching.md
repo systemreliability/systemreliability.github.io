@@ -1,12 +1,19 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+title: Teaching
+description: Courses I Taught or Codeveloped.
 nav: true
-nav_order: 6
+nav_order: 4
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+#### Teaching Assistant (Seoul National University)
 
-Organize your courses by years, topics, or universities, however you like!
+- 457.212 Statistics for Civil & Environmental Engineers (Fall 2019)
+- 457.643 Structural Random Vibrations (Fall 2022)
+- M2177.005600 Global Interchange Lecture on Engineering Technology 2 (Summer 2024, w/ University of Tokyo)
+
+#### Developing class materials (Seoul National University)
+
+- M1586.002500 Information Engineering for CE Engineers (Spring 2019)
+- M3204.000600 Information Engineering for Infrastructures in Smart Cities (Spring 2024)
