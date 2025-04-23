@@ -440,16 +440,19 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-i-joined-the-structural-system-reliability-group-ssrg-at-snu",
+          title: 'I joined the Structural System Reliability Group (SSRG) at SNU.',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-i-39-ve-completed-my-ph-d",
+          title: 'I&amp;#39;ve completed my Ph.D.',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+              window.location.href = "/news/announcement_4/";
+            },},{id: "news-i-joined-the-institute-of-construction-and-environmental-engineering-icee-at-snu-as-a-postdoctoral-researcher",
+          title: 'I joined the Institute of Construction and Environmental Engineering (ICEE) at SNU as...',
+          description: "",
+          section: "News",},{id: "news-i-joined-the-engineering-risk-analysis-group-era-at-tum-as-a-postdoctoral-researcher",
+          title: 'I joined the Engineering Risk Analysis Group (ERA) at TUM as a postdoctoral...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
