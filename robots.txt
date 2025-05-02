@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://dongkyu-lee.kro.kr//sitemap.xml
+Sitemap: http://dongkyu-lee.info/sitemap.xml
