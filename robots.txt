@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://dongkyu-lee.info/sitemap.xml
+Sitemap: https://systemreliability.github.io/sitemap.xml
