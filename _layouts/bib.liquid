@@ -265,6 +265,11 @@
         {% assign entry_has_dimensions_badge = true %}
       {% endif %}
 
+      {% assign entry_has_plumx_badge = false %}
+      {% if entry.plumx and entry.plumx != 'false' %}
+        {% assign entry_has_plumx_badge = true %}
+      {% endif %}
+
       {% assign entry_has_google_scholar_badge = false %}
       {% if entry.google_scholar_id %}
         {% assign entry_has_google_scholar_badge = true %}
