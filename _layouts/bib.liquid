@@ -326,16 +326,27 @@
           {% if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
             <a
               href="https://plu.mx/a/?doi={{ entry.doi }}"
+              aria-label="PlumX Metrics Detail Page"
               class="plumx-plum-print-popup d-inline-block"
-              data-popup="right"
-              data-size="tiny"
-              data-site="plum"
               data-hide-when-empty="true"
               data-pass-hidden-categories="true"              
-              aria-label="PlumX Metrics Detail Page"
+              data-popup="right"
+              data-site="plum"
+              data-size="tiny"
               role="button"
             >
             </a>
+            <a
+              href="https://plu.mx/a/?doi={{ entry.doi }}"
+              aria-label="PlumX Metrics Detail Page"
+              class="plumx-plum-print-popup d-inline-block"
+              data-badge="true"
+              data-hide-when-empty="true"
+              data-pass-hidden-categories="true"
+              data-popup="right"
+              data-site="plum"
+              role="button"
+            >
           {% endif %}
           {% if site.enable_publication_badges.inspirehep and entry_has_inspirehep_badge %}
             <a
