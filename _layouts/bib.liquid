@@ -263,10 +263,6 @@
       {% assign entry_has_dimensions_badge = false %}
       {% if entry.dimensions and entry.dimensions != 'false' %}
         {% assign entry_has_dimensions_badge = true %}
-      {% endif %}
-
-      {% assign entry_has_plums_badge = false %}
-      {% if entry.plums and entry.plums != 'false' %}
         {% assign entry_has_plums_badge = true %}
       {% endif %}
 
@@ -281,7 +277,6 @@
       {% endif %}
       {% if entry_has_altmetric_badge
         or entry_has_dimensions_badge
-        or entry_has_plumx_badge
         or entry_has_google_scholar_badge
         or entry_has_inspirehep_badge
       %}
@@ -319,10 +314,12 @@
               data-style="small_rectangle"
               style="margin-bottom: 3px;"
             ></span>
-          {% endif %}
-          {% if site.enable_publication_badges.plumx and entry_has_plumx_badge %}
+            <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
             <a
               href="https://plu.mx/plum/a/?doi={{ entry.doi }}"
+              data-hide-when-empty="true"
+              aria-label="PlumX Metrics Detail Page"
+              role="button"
               data-popup="right"
               data-size="small"
               class="plumx-plum-print-popup"
