@@ -197,18 +197,6 @@
       {% endif %}
       {% if entry.doi %}
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
-        <a
-          href="https://plu.mx/a/?doi={{ entry.doi }}"
-          data-popup="right"
-          data-badge="true"
-          class="plumx-plum-print-popup"
-          data-site="plum"
-          data-hide-when-empty="true"
-          data-no-link="true"
-          data-pass-hidden-categories="true"
-          role="button"
-          >Metrics</a
-        >
       {% endif %}
       {% if entry.arxiv %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
@@ -336,12 +324,15 @@
             ></span>
             <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
             <a
-              href="https://plu.mx/plum/a/?doi={{ entry.doi }}"
+              href="https://plu.mx/a/?doi={{ entry.doi }}"
+              class="plumx-plum-print-popup plum-liberty-theme"
+              data-popup="right"
+              data-badge="true"
+              data-site="plum"
               data-hide-when-empty="true"
+              data-pass-hidden-categories="true"
               aria-label="PlumX Metrics Detail Page"
               role="button"
-              data-popup="right"
-              data-size="small"
               class="plumx-plum-print-popup"
               data-site="plum"
               data-no-link="true"
