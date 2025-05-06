@@ -2694,13 +2694,15 @@ d-citation-list .references .title {
         tokenize: function (text, grammar) {
           var rest = grammar.rest;
           if (rest) {
+            var sanitizedRest = Object.create(null);
             for (var token in rest) {
               if (token === "__proto__" || token === "constructor" || token === "prototype") {
                 continue;
               }
-              grammar[token] = rest[token];
+              sanitizedRest[token] = rest[token];
             }
 
+            Object.assign(grammar, sanitizedRest);
             delete grammar.rest;
           }
 
