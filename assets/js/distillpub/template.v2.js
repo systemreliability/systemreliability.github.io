@@ -2694,15 +2694,10 @@ d-citation-list .references .title {
         tokenize: function (text, grammar) {
           var rest = grammar.rest;
           if (rest) {
-            var sanitizedRest = Object.create(null);
             for (var token in rest) {
-              if (token === "__proto__" || token === "constructor" || token === "prototype") {
-                continue;
-              }
-              sanitizedRest[token] = rest[token];
+              grammar[token] = rest[token];
             }
 
-            Object.assign(grammar, sanitizedRest);
             delete grammar.rest;
           }
 
@@ -3175,7 +3170,7 @@ d-citation-list .references .title {
         var def = {};
         def[tagName] = {
           pattern: RegExp(
-            /(<__[^>]*?>)(?:<!\[CDATA\[[^\]]*(?:\](?!\]>)[^\]]*)*\]\]>\s*|[^<]+)*(?=<\/__>)/.source.replace(/__/g, function () {
+            /(<__[\s\S]*?>)(?:<!\[CDATA\[[\s\S]*?\]\]>\s*|[\s\S])*?(?=<\/__>)/.source.replace(/__/g, function () {
               return tagName;
             }),
             "i"
