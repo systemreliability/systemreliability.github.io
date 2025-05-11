@@ -334,7 +334,7 @@
               >
             </a>
           {% endif %}
-          {% if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
+          {% if entry.abstract != blank %}
             <a
               href="https://plu.mx/a/?doi={{ entry.doi }}"
               aria-label="PlumX Metrics Detail Page"
