@@ -1,2 +1,5 @@
 nbconvert
-PyYAML
+scholarly
+requests
+beautifulsoup4
+pyyaml
