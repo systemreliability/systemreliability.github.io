@@ -37,7 +37,6 @@
             sizes = "200px"
             class="preview z-depth-1 rounded"
             zoomable=true
-            avoid_scaling=true
             alt=entry.preview
           %}
         {% endif %}
@@ -74,15 +73,13 @@
             {% if coauthor.firstname contains author.first %}
               {%- assign coauthor_url = coauthor.url -%}
               {% break %}
-            {%- endif -%}
+            {% endif %}
           {% endfor %}
         {%- endif -%}
 
         {%- if forloop.length > 1 -%}
-          {% if forloop.first == false -%}
-            {%- if forloop.length > 2 %}, {% elsif forloop.length == 2 %}  {% endif %}
-          {%- endif %}
-          {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
+          {% if forloop.first == false %},&nbsp;{% endif %}
+          {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
         {% endif %}
         {%- if author_is_self -%}
           <em>
@@ -260,17 +257,21 @@
         {% assign entry_has_altmetric_badge = true %}
       {% endif %}
 
+      {% assign entry_has_dimensions_badge = false %}
+      {% if entry.dimensions and entry.dimensions != 'false' %}
+        {% assign entry_has_dimensions_badge = true %}
+      {% endif %}
+
       {% assign entry_has_google_scholar_badge = false %}
       {% if entry.google_scholar_id %}
         {% assign entry_has_google_scholar_badge = true %}
-        {% assign entry_has_dimensions_badge = true %}
       {% endif %}
 
       {% assign entry_has_inspirehep_badge = false %}
       {% if entry.inspirehep_id %}
         {% assign entry_has_inspirehep_badge = true %}
       {% endif %}
-      {% if entry_has_altmetric_badge or entry_has_google_scholar_badge or entry_has_inspirehep_badge %}
+      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge or entry_has_inspirehep_badge %}
         <div class="badges d-inline-flex align-items-center" style="gap:0.35rem;">
           {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span
@@ -301,17 +302,17 @@
                 data-pmid="{{ entry.pmid }}"
               {% endif %}
               data-style="small_rectangle"
-              style="margin-bottom: 2.5px;"
+              style="margin-bottom: 3px;"
             ></span>
           {% endif %}
           {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
             <a
-              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=cLfMY9wAAAAJ:{{ entry.google_scholar_id }}"
+              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.scholar_userid }}&citation_for_view={{ site.scholar_userid }}:{{ entry.google_scholar_id }}"
               aria-label="Google Scholar link"
               role="button"
             >
               {% assign citation_count = 0 %}
-              {% assign scholar_id_key = 'cLfMY9wAAAAJ:' | append: entry.google_scholar_id %}
+              {% assign scholar_id_key = site.scholar_userid | append: ':' | append: entry.google_scholar_id %}
               {% assign publication_key = entry.google_scholar_id %}
 
               {% if site.data.citations.papers[scholar_id_key] %}
