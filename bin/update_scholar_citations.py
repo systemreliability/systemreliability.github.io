@@ -28,7 +28,7 @@ def get_scholar_citations():
     # Initialize citation data structure
     citation_data = {
         'metadata': {
-            'last_updated': datetime.now().strftime('%Y/%m/%d')
+            'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         },
         'papers': {}  # Initialize as empty dict, not None
     }
