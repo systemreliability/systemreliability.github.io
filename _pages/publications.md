@@ -14,7 +14,7 @@ nav_order: 2
 {% if site.data.citations.metadata.last_updated %}
 
 <p class="text-muted mt-3 small">
-  <i class="fas fa-sync-alt mr-1"></i> Automatically updated on {{ site.data.citations.metadata.last_updated }}
+  <i class="fas fa-sync-alt mr-1"></i> Automatically updated on {{ site.data.citations.metadata.last_updated | date: "%B %d, %Y" }}
 </p>
 {% endif %}
 
