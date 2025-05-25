@@ -3,3 +3,4 @@ scholarly
 requests
 beautifulsoup4
 pyyaml
+yaml
