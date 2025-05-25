@@ -24,15 +24,15 @@ def get_scholar_citations():
     Fetch citation data from Google Scholar for all papers by the specified author
     """
     print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
-    
+
     # Initialize citation data structure
     citation_data = {
         'metadata': {
-            'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            'last_updated': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         },
         'papers': {}  # Initialize as empty dict, not None
     }
-    
+
     # Try to load existing data first to avoid unnecessary requests
     if os.path.exists(OUTPUT_FILE):
         try:
@@ -61,11 +61,11 @@ def get_scholar_citations():
             else:
                 print("All retries failed. Using existing data if available.")
                 return citation_data
-    
+
     if not author_data:
         print("Could not fetch author data")
         return citation_data
-        
+
     # Process publications
     if 'publications' in author_data:
         for pub in author_data['publications']:
@@ -76,39 +76,39 @@ def get_scholar_citations():
                     pub_id = pub['pub_id']
                 elif 'author_pub_id' in pub and pub['author_pub_id']:
                     pub_id = pub['author_pub_id']
-                
+
                 if not pub_id:
                     print(f"Warning: No ID found for publication: {pub.get('bib', {}).get('title', 'Unknown')}")
                     continue
-                
+
                 # Get publication metadata
                 title = "Unknown Title"
                 year = "Unknown Year"
                 citations = 0
-                
+
                 if 'bib' in pub:
                     if 'title' in pub['bib']:
                         title = pub['bib']['title']
                     if 'pub_year' in pub['bib']:
-                        year = pub['bib']['pub_year']
-                
+                        year = str(pub['bib']['pub_year'])
+
                 if 'num_citations' in pub:
                     citations = pub['num_citations']
-                
+
                 print(f"Found: {title} ({year}) - Citations: {citations}")
-                
+
                 # Store citation data
                 citation_data['papers'][pub_id] = {
                     'title': title,
                     'year': year,
                     'citations': citations
                 }
-                
+
             except Exception as e:
                 print(f"Error processing publication: {str(e)}")
     else:
         print("No publications found in author data")
-    
+
     # Save to YAML file
     try:
         with open(OUTPUT_FILE, 'w') as f:
@@ -116,7 +116,7 @@ def get_scholar_citations():
         print(f"Citation data saved to {OUTPUT_FILE}")
     except Exception as e:
         print(f"Error saving citation data: {str(e)}")
-    
+
     return citation_data
 
 if __name__ == "__main__":
