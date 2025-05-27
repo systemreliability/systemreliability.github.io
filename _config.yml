@@ -47,7 +47,7 @@ rss_icon: false
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: false
 socials_in_search: false
 posts_in_search: false
@@ -86,7 +86,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Dr. Dongkyu Lee # blog_name will be displayed in your blog page
+blog_name: Dongkyu Lee # blog_name will be displayed in your blog page
 blog_description: News about Publications and Awards
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
