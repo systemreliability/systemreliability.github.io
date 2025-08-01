@@ -5,11 +5,8 @@ date: 2023-10-21 16:30:00
 description: Visiting
 tags: Visiting
 categories: Visiting
-featured: true
+featured: false
 related_publications: false
-images:
-  compare: true
-  slider: true
 ---
 
 ## Details of the work at Princeton University
