@@ -16,5 +16,3 @@ images:
 
 I have started my one-month visiting research at Princeton University, USA.
 During my stay in Princeton, I collaborate with the host, [Prof. Jürgen Hackl](https://cis.scholar.princeton.edu/).
-
-<hr>
