@@ -6,15 +6,15 @@ papers:
       selective recursive decomposition algorithm
     year: "2021"
     citations: 19
-  cLfMY9wAAAAJ:UeHWp8X0CEIC:
-    title: Risk-informed operation and maintenance of complex lifeline systems using
-      parallelized multi-agent deep Q-network
-    year: "2023"
-    citations: 12
   cLfMY9wAAAAJ:ufrVoPGSRksC:
     title: Efficient seismic reliability and fragility analysis of lifeline networks
       using subset simulation
     year: "2025"
+    citations: 13
+  cLfMY9wAAAAJ:UeHWp8X0CEIC:
+    title: Risk-informed operation and maintenance of complex lifeline systems using
+      parallelized multi-agent deep Q-network
+    year: "2023"
     citations: 12
   cLfMY9wAAAAJ:vRqMK49ujn8C:
     title: Network reliability analysis and complexity quantification using Bayesian
