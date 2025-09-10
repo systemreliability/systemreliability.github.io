@@ -2694,6 +2694,17 @@ d-citation-list .references .title {
         tokenize: function (text, grammar) {
           var rest = grammar.rest;
           if (rest) {
+            // Ensure grammar is a prototype-less object to prevent prototype pollution
+            if (Object.getPrototypeOf(grammar) !== null) {
+              var safeGrammar = Object.create(null);
+              // Copy only own properties from the original grammar object
+              for (var key in grammar) {
+                if (Object.prototype.hasOwnProperty.call(grammar, key) && key !== "rest") {
+                  safeGrammar[key] = grammar[key];
+                }
+              }
+              grammar = safeGrammar;
+            }
             for (var token in rest) {
               if (token !== "__proto__" && token !== "constructor" && token !== "prototype") {
                 grammar[token] = rest[token];
