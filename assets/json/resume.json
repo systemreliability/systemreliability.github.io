@@ -230,20 +230,6 @@
       "icon": ""
     }
   ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
   "references": [
     {
       "name": "Professor John Doe",
@@ -258,24 +244,14 @@
   ],
   "reviews": [
     {
-      "language": "IEEE transactions on reliability",
-      "fluency": "reviewer",
-      "icon": ""
-    },
-    {
-      "language": "Reliability engineering & systems safety",
-      "fluency": "reviewer",
-      "icon": ""
-    },
-    {
-      "language": "Structural safety",
-      "fluency": "reviewer",
-      "icon": ""
-    },
-    {
-      "language": "ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering",
-      "fluency": "reviewer",
-      "icon": ""
+      "name": "Journals",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "IEEE transactions on reliability",
+        "Reliability engineering & systems safety",
+        "Structural safety",
+        "ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering"
+      ]
     }
   ],
   "projects": [
