@@ -242,18 +242,6 @@
       "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     }
   ],
-  "reviews": [
-    {
-      "name": "Journals",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "IEEE transactions on reliability",
-        "Reliability engineering & systems safety",
-        "Structural safety",
-        "ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering"
-      ]
-    }
-  ],
   "projects": [
     {
       "name": "Deep reinforcement learning-based optimal maintenance strategy for large-scale infrastructure networks under seismic risk",
