@@ -256,6 +256,28 @@
       "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     }
   ],
+  "reviews": [
+    {
+      "language": "IEEE transactions on reliability",
+      "fluency": "reviewer",
+      "icon": ""
+    },
+    {
+      "language": "Reliability engineering & systems safety",
+      "fluency": "reviewer",
+      "icon": ""
+    },
+    {
+      "language": "Structural safety",
+      "fluency": "reviewer",
+      "icon": ""
+    },
+    {
+      "language": "ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering",
+      "fluency": "reviewer",
+      "icon": ""
+    }
+  ],
   "projects": [
     {
       "name": "Deep reinforcement learning-based optimal maintenance strategy for large-scale infrastructure networks under seismic risk",
@@ -263,7 +285,7 @@
       "highlights": ["Deep Reinforcement Learning", "Maintenance Strategy"],
       "startDate": "2024-09-01",
       "endDate": "Now",
-      "url": "https://dongkyu-lee.kro.kr/projects/1_project/"
+      "url": "https://dongkyu-lee.info/projects/1_project/"
     }
   ]
 }
