@@ -5,17 +5,17 @@ papers:
     title: Multi-scale seismic reliability assessment of networks by centrality-based
       selective recursive decomposition algorithm
     year: '2021'
-    citations: 19
+    citations: 20
   cLfMY9wAAAAJ:ufrVoPGSRksC:
     title: Efficient seismic reliability and fragility analysis of lifeline networks
       using subset simulation
     year: '2025'
-    citations: 17
+    citations: 18
   cLfMY9wAAAAJ:UeHWp8X0CEIC:
     title: Risk-informed operation and maintenance of complex lifeline systems using
       parallelized multi-agent deep Q-network
     year: '2023'
-    citations: 14
+    citations: 15
   cLfMY9wAAAAJ:vRqMK49ujn8C:
     title: Network reliability analysis and complexity quantification using Bayesian
       network and dual representation
