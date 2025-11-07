@@ -5,7 +5,7 @@ papers:
     title: Multi-scale seismic reliability assessment of networks by centrality-based
       selective recursive decomposition algorithm
     year: "2021"
-    citations: 20
+    citations: 21
   cLfMY9wAAAAJ:ufrVoPGSRksC:
     title: Efficient seismic reliability and fragility analysis of lifeline networks
       using subset simulation
@@ -25,7 +25,7 @@ papers:
     title: Seismic performance management of aging road facilities in Korea: Part
       2 - decision-making support technology and its application
     year: "2024"
-    citations: 1
+    citations: 2
   cLfMY9wAAAAJ:B3FOqHPlNUQC:
     title: Dual graph-based Bayesian network modeling with Rao-Blackwellization for
       seismic reliability and complexity quantification of network connectivity
