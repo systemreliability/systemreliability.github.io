@@ -49,12 +49,15 @@ ninja.data = [{
           title: 'I&amp;#39;ve completed my Ph.D.',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/announcement_21/";
+              window.location.href = "/news/announcement_2/";
             },},{id: "news-i-joined-the-institute-of-construction-and-environmental-engineering-icee-at-snu-as-a-postdoctoral-researcher",
           title: 'I joined the Institute of Construction and Environmental Engineering (ICEE) at SNU as...',
           description: "",
           section: "News",},{id: "news-i-joined-the-engineering-risk-analysis-group-era-at-tum-as-a-postdoctoral-researcher",
           title: 'I joined the Engineering Risk Analysis Group (ERA) at TUM as a postdoctoral...',
+          description: "",
+          section: "News",},{id: "news-i-joined-the-department-of-civil-environmental-and-mechanical-engineering-dicam-at-unitn-as-a-postdoctoral-researcher",
+          title: 'I joined the Department of civil, environmental and mechanical engineering (DICAM) at UNITN...',
           description: "",
           section: "News",},{id: "projects-postdoctoral-fellowship-program",
           title: 'Postdoctoral Fellowship Program',
