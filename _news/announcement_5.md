@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I joined the [Department of Civil, Environmental and Mechanical engineering](https://www.dicam.unitn.it/en) at UNITN as a postdoctoral researcher.
+I joined the [Department of Civil, Environmental and Mechanical engineering](https://www.dicam.unitn.it/en) (DICAM) at UNITN as a postdoctoral researcher.
