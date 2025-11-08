@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Postdoctoral Researcher. <a href="https://www.dicam.unitn.it/"> Department of civil, environmental and mechanical engineering</a>, <a href="https://www.unitn.it/en"> University of Trento</a>.
+subtitle: Postdoctoral Researcher. <a href="https://www.dicam.unitn.it/en"> Department of civil, environmental and mechanical engineering</a>, <a href="https://www.unitn.it/en"> University of Trento</a>.
 
 profile:
   align: right
