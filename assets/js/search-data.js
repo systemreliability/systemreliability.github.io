@@ -49,7 +49,7 @@ ninja.data = [{
           title: 'I&amp;#39;ve completed my Ph.D.',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/announcement_21/";
+              window.location.href = "/news/announcement_2/";
             },},{id: "news-i-joined-the-institute-of-construction-and-environmental-engineering-icee-at-snu-as-a-postdoctoral-researcher",
           title: 'I joined the Institute of Construction and Environmental Engineering (ICEE) at SNU as...',
           description: "",
