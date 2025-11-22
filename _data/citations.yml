@@ -15,16 +15,16 @@ papers:
     title: "Risk-informed operation and maintenance of complex lifeline systems using
       parallelized multi-agent deep Q-network"
     year: "2023"
-    citations: 18
-  cLfMY9wAAAAJ:vRqMK49ujn8C:
-    title: "Network reliability analysis and complexity quantification using Bayesian
-      network and dual representation"
-    year: "2023"
-    citations: 2
+    citations: 19
   cLfMY9wAAAAJ:b0M2c_1WBrUC:
     title: "Seismic performance management of aging road facilities in Korea: Part
       2 - decision-making support technology and its application"
     year: "2024"
+    citations: 3
+  cLfMY9wAAAAJ:vRqMK49ujn8C:
+    title: "Network reliability analysis and complexity quantification using Bayesian
+      network and dual representation"
+    year: "2023"
     citations: 2
   cLfMY9wAAAAJ:B3FOqHPlNUQC:
     title: "Dual graph-based Bayesian network modeling with Rao-Blackwellization for
