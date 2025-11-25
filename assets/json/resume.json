@@ -3,16 +3,16 @@
     "name": "Dongkyu Lee",
     "label": "Ph.D.",
     "image": "",
-    "email": "dongkyu.lee@tum.de",
-    "phone": "(+49) (0)163-3669220",
+    "email": "dongkyu.lee@unitn.it",
+    "phone": "(+39) 352 0993924",
     "url": "https://dongkyu-lee.info/",
     "summary": "Postdoctoral Researcher",
     "location": {
-      "address": "Theresienstraße 90, N3624",
-      "postalCode": "80333",
-      "city": "München",
-      "countryCode": "DE",
-      "region": "Bayern"
+      "address": "Via Mesiano, 77",
+      "postalCode": "38123",
+      "city": "Trento",
+      "countryCode": "TN",
+      "region": "Trentino-Alto Adige"
     },
     "profiles": [
       {
@@ -24,12 +24,22 @@
   },
   "work": [
     {
+      "name": "University of Trento",
+      "location": "Trento, Italy",
+      "position": "Postdoctoral Researcher",
+      "url": "https://www.dicam.unitn.it/en",
+      "startDate": "2025-10-27",
+      "endDate": "NOW",
+      "summary": "Postdoctoral researcher",
+      "highlights": ["Uncertainty Quantification"]
+    },
+    {
       "name": "Engineering Risk Analysis Group, Technical University of Munich",
       "location": "Munich, Germany",
       "position": "Postdoctoral Researcher",
       "url": "https://www.cee.ed.tum.de/era/era-group/",
       "startDate": "2024-09-01",
-      "endDate": "Now",
+      "endDate": "2025-08-31",
       "summary": "Postdoctoral Fellowship Program (nurturing next-generation researchers), supported by National Research Foundation of Korea (NRF)",
       "highlights": ["Deep reinforcement learning-based optimal maintenance strategy for large-scale infrastructure networks under seismic risk"]
     },
