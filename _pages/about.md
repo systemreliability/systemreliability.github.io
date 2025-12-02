@@ -29,7 +29,7 @@ latest_posts:
 
 **Dr. Dongkyu Lee** received his B.S. and Ph.D. in Civil & Environmental Engineering from [Seoul National University](https://en.snu.ac.kr/) (SNU). After working as a postdoctoral researcher at [SNU](https://icee.snu.ac.kr/) (2023-2024) and [Technical University of Munich](https://www.tum.de/en/) (TUM) (2024-2025), he joined [University of Trento](https://www.unitn.it/en) (UNITN) as a **Postdoctoral researcher**.
 
-He has a broad academical background in graph theory, deep reinforcement learning, Bayesian network, variance-reduction techniques (importance sampling, subset simulation, ...), etc. He is interested in:
+He has a broad academical background in **Graph theory**, **Deep reinforcement learning**, **Bayesian network**, **Variance-reduction techniques** (importance sampling, subset simulation, ...), etc. He is interested in:
 
 - Reliability analysis of urban systems/networks under seismic uncertainties
 - Risk-informed maintenance strategies for lifeline networks
