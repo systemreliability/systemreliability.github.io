@@ -9,9 +9,9 @@ profile:
   image: pic_Lee.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-  <p>    Via Mesiano, 77    </p>
-  <p>  38123 Trento, Italy  </p>
-  <p>  dongkyu.lee@unitn.it </p>
+    <p>    Via Mesiano, 77    </p>
+    <p>  38123 Trento, Italy  </p>
+    <p>  dongkyu.lee@unitn.it </p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
