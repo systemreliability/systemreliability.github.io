@@ -23,3 +23,13 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+.profile-swap {
+  width: 100%;
+  height: auto;
+  transition: 0.3s;
+}
+
+.profile-swap:hover {
+  content: url('/assets/img/pic_Lee1.png');
+}
