@@ -7,6 +7,7 @@ subtitle: Postdoctoral Researcher. <a href="https://www.dicam.unitn.it/en"> Depa
 profile:
   align: right
   image: pic_Lee.jpg
+  image_hover: pic_Lee.png
   image_circular: false
   more_info: >
     <p>Via Mesiano, 77</p>
