@@ -207,6 +207,28 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+/* About profile image hover swap */
+.profile-hover-swap{
+  position: relative;
+  display: inline-block;
+}
+
+.profile-hover-swap .hover-img{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.profile-hover-swap:hover .hover-img{
+  opacity: 1;
+}
+
+.profile-hover-swap figure{
+  margin: 0;
+}
+/* figure.liquid가 figure 마진을 주는 경우 대비 (있으면 점프/어긋남 방지) */
+
 .profile.float-right {
   margin-left: 1rem;
 }
