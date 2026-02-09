@@ -213,7 +213,7 @@ ul.task-list input[type="checkbox"] {
   display: inline-block;
 }
 
-.profile-hover-swap > figure {
+.profile-hover-swap > *:first-child {
   position: relative;
   z-index: 1;
   margin: 0;
@@ -225,10 +225,6 @@ ul.task-list input[type="checkbox"] {
   z-index: 2;
   opacity: 0;
   transition: opacity 200ms ease-in-out;
-}
-
-.profile-hover-swap .hover-img > figure {
-  margin: 0;
 }
 
 .profile-hover-swap:hover .hover-img {
