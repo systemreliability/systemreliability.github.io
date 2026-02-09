@@ -6,12 +6,11 @@ subtitle: Postdoctoral Researcher. <a href="https://www.dicam.unitn.it/en"> Depa
 
 profile:
   align: right
-  image: <img class="profile-swap" src="{{ '/assets/img/pic_Lee.jpg' | relative_url }}" alt="Profile photo">
-  image_circular: false # crops the image to make it circular
+  image: pic_Lee.jpg
+  image_circular: false
   more_info: >
     <p>Via Mesiano, 77</p>
     <p>38123 Trento, Italy</p>
-    <p><a href="mailto:dongkyu.lee@unitn.it">dongkyu.lee@unitn.it</a></p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
