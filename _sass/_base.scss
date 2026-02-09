@@ -210,13 +210,14 @@ ul.task-list input[type="checkbox"] {
 /* About profile image hover swap - enforce stacking order */
 .profile-hover-swap {
   position: relative;
-  display: inline-block;
+  display: block;
+  width: 100%;
 }
 
-.profile-hover-swap > *:first-child {
-  position: relative;
-  z-index: 1;
-  margin: 0;
+.profile-hover-swap figure,
+.profile-hover-swap img {
+  width: 100%;
+  height: auto;
 }
 
 .profile-hover-swap .hover-img {
