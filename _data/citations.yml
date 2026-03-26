@@ -1,10 +1,10 @@
 metadata:
-  last_updated: "2026-03-17 00:00:00"
+  last_updated: "2026-03-26 00:00:00"
 papers:
   cLfMY9wAAAAJ:ufrVoPGSRksC:
     title: "Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation"
     year: "2025"
-    citations: 30
+    citations: 32
   cLfMY9wAAAAJ:UeHWp8X0CEIC:
     title: "Risk-informed operation and maintenance of complex lifeline systems using parallelized multi-agent deep Q-network"
     year: "2023"
