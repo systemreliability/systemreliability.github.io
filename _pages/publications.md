@@ -22,3 +22,5 @@ nav_order: 2
 {% bibliography %}
 
 </div>
+
+<script src="{{ '/assets/js/publication-badges.js' | relative_url }}"></script>
