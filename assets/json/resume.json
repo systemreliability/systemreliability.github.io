@@ -238,6 +238,26 @@
       "language": "English",
       "fluency": "Fluent",
       "icon": ""
+    },
+    {
+      "language": "Italian",
+      "fluency": "A1",
+      "icon": ""
+    },
+    {
+      "language": "Chinese",
+      "fluency": "A1",
+      "icon": ""
+    },
+    {
+      "language": "Japanese",
+      "fluency": "A1",
+      "icon": ""
+    },
+    {
+      "language": "German",
+      "fluency": "A1",
+      "icon": ""
     }
   ],
   "references": [
