@@ -33,35 +33,36 @@
 
   const getOpenAlexUiUrl = (workId) => workId.replace("https://api.openalex.org/", "https://openalex.org/");
 
-  const resolveOpenAlexLink = async (link, apiUrl) => {
+  const fetchOpenAlexWork = async (apiUrl) => {
     try {
       const response = await fetch(apiUrl);
-      if (!response.ok) return;
+      if (!response.ok) return null;
 
       const work = await response.json();
-      if (work.id) link.href = getOpenAlexUiUrl(work.id);
+      return work.id && Number.isFinite(work.cited_by_count) ? work : null;
     } catch {
-      // Keep the DOI fallback if OpenAlex lookup is unavailable.
+      return null;
     }
   };
 
-  const addOpenAlexBadge = (badges, doi) => {
+  const addOpenAlexBadge = async (badges, doi) => {
     if (badges.querySelector(".openalex-badge")) return;
 
     const apiUrl = `https://api.openalex.org/works/https://doi.org/${doi}?select=id,cited_by_count`;
+    const work = await fetchOpenAlexWork(apiUrl);
+    if (!work) return;
+
     const link = document.createElement("a");
     link.className = "openalex-badge";
-    link.href = `https://doi.org/${doi}`;
+    link.href = getOpenAlexUiUrl(work.id);
     link.setAttribute("aria-label", "OpenAlex link");
     link.setAttribute("role", "button");
     link.rel = "external nofollow noopener";
     link.target = "_blank";
 
     const image = document.createElement("img");
-    image.src = `https://img.shields.io/badge/dynamic/json?url=${encodeURIComponent(
-      apiUrl
-    )}&query=$.cited_by_count&label=OpenAlex&color=2f7f6f&labelColor=beige`;
-    image.alt = "OpenAlex citation count";
+    image.src = `https://img.shields.io/badge/OpenAlex-${work.cited_by_count}-2f7f6f?labelColor=beige`;
+    image.alt = `${work.cited_by_count} OpenAlex citations`;
 
     link.appendChild(image);
 
@@ -71,8 +72,6 @@
     } else {
       badges.appendChild(link);
     }
-
-    resolveOpenAlexLink(link, apiUrl);
   };
 
   document.querySelectorAll(".bibliography li > .row > [id]").forEach((entry) => {
