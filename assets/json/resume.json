@@ -28,7 +28,7 @@
       "location": "Trento, Italy",
       "position": "Postdoctoral Researcher",
       "url": "https://www.dicam.unitn.it/en",
-      "startDate": "2025-10-27",
+      "startDate": "2025-11-06",
       "endDate": "NOW",
       "summary": "Postdoctoral researcher",
       "highlights": ["Uncertainty Quantification"]
@@ -37,7 +37,7 @@
       "name": "Engineering Risk Analysis Group, Technical University of Munich",
       "location": "Munich, Germany",
       "position": "Postdoctoral Researcher",
-      "url": "https://www.cee.ed.tum.de/era/era-group/",
+      "url": "https://www.cee.ed.tum.de/era/team/former-members-and-students/dongkyu-lee/",
       "startDate": "2024-09-01",
       "endDate": "2025-08-31",
       "summary": "Postdoctoral Fellowship Program (nurturing next-generation researchers), supported by National Research Foundation of Korea (NRF)",
@@ -187,7 +187,7 @@
     {
       "name": "Multi‐scale seismic reliability assessment of networks by centrality‐based selective recursive decomposition algorithm",
       "publisher": "A new algorithm utilizing network centrality, termed “centrality-based selective recursive decomposition algorithm” (CS-RDA), is introduced. By preferentially decomposing the node which is most likely to belong to the min-cut identified based on the betweenness centrality, the convergence of the bounds on the O/D connectivity can be expedited significantly.",
-      "releaseDate": "2021-03-07",
+      "releaseDate": "2021-07-10",
       "url": "https://doi.org/10.1002/eqe.3447",
       "summary": "Earthquake Engineering & Structural Dynamics"
     },
@@ -258,7 +258,7 @@
       "summary": "",
       "highlights": ["Deep Reinforcement Learning", "Maintenance Strategy"],
       "startDate": "2024-09-01",
-      "endDate": "Now",
+      "endDate": "2025-08-31",
       "url": "https://dongkyu-lee.info/projects/1_project/"
     }
   ]
