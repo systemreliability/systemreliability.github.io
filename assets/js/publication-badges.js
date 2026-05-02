@@ -26,30 +26,52 @@
     badge.className = "altmetric-embed";
     badge.dataset.badgeType = "2";
     badge.dataset.badgePopover = "right";
+    badge.dataset.hideNoMentions = "true";
     badge.dataset.doi = doi;
     badges.prepend(badge);
   };
 
-  const addOpenAlexBadge = (badges, doi) => {
+  const getOpenAlexUiUrl = (workId) => workId.replace("https://api.openalex.org/", "https://openalex.org/");
+
+  const fetchOpenAlexWork = async (apiUrl) => {
+    try {
+      const response = await fetch(apiUrl);
+      if (!response.ok) return null;
+
+      const work = await response.json();
+      return work.id && Number.isFinite(work.cited_by_count) ? work : null;
+    } catch {
+      return null;
+    }
+  };
+
+  const addOpenAlexBadge = async (badges, doi) => {
     if (badges.querySelector(".openalex-badge")) return;
 
-    const apiUrl = `https://api.openalex.org/works/https://doi.org/${doi}?select=cited_by_count`;
+    const apiUrl = `https://api.openalex.org/works/https://doi.org/${doi}?select=id,cited_by_count`;
+    const work = await fetchOpenAlexWork(apiUrl);
+    if (!work) return;
+
     const link = document.createElement("a");
     link.className = "openalex-badge";
-    link.href = `https://openalex.org/search?q=${encodeURIComponent(`doi:${doi}`)}`;
+    link.href = getOpenAlexUiUrl(work.id);
     link.setAttribute("aria-label", "OpenAlex link");
     link.setAttribute("role", "button");
     link.rel = "external nofollow noopener";
     link.target = "_blank";
 
     const image = document.createElement("img");
-    image.src = `https://img.shields.io/badge/dynamic/json?url=${encodeURIComponent(
-      apiUrl
-    )}&query=$.cited_by_count&label=OpenAlex&color=2f7f6f&labelColor=beige`;
-    image.alt = "OpenAlex citation count";
+    image.src = `https://img.shields.io/badge/OpenAlex-${work.cited_by_count}-2f7f6f?labelColor=beige`;
+    image.alt = `${work.cited_by_count} OpenAlex citations`;
 
     link.appendChild(image);
-    badges.appendChild(link);
+
+    const plumxBadge = badges.querySelector(".plumx-plum-print-popup");
+    if (plumxBadge) {
+      badges.insertBefore(link, plumxBadge);
+    } else {
+      badges.appendChild(link);
+    }
   };
 
   document.querySelectorAll(".bibliography li > .row > [id]").forEach((entry) => {
