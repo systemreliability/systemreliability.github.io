@@ -194,21 +194,21 @@
     {
       "name": "Risk-informed operation and maintenance of complex lifeline systems using parallelized multi-agent deep Q-network",
       "publisher": "A multi-agent deep reinforcement learning framework, termed parallelized multi-agent deep Q-network (PM-DQN), is proposed to overcome the curse of dimensionality. The proposed method takes a divide-and-conquer strategy, in which multiple subsystems are identified by community detection, and each agent learns to achieve the O&M policy of the corresponding subsystem.",
-      "releaseDate": "2023-11-01",
+      "releaseDate": "2023-11",
       "url": "https://doi.org/10.1016/j.ress.2023.109512",
       "summary": "Reliability Engineering & System Safety"
     },
     {
       "name": "Efficient seismic reliability and fragility analysis of lifeline networks using subset simulation",
       "publisher": "The binary network limit-state function in the subset simulation is reformulated into more informative piecewise continuous functions. The proposed limit-state functions quantify the proximity of each sample to a potential network failure domain, thereby enabling the construction of specialized intermediate failure events, which can be utilized in subset simulation and other sequential Monte Carlo approaches.",
-      "releaseDate": "2025-08-01",
+      "releaseDate": "2025-08",
       "url": "https://doi.org/10.1016/j.ress.2025.110947",
       "summary": "Reliability Engineering & System Safety"
     },
     {
       "name": "Dual graph-based Bayesian network modeling with Rao-Blackwellization for seismic reliability and complexity quantification of network connectivity",
       "publisher": "The method employs the dual graph representation of a target system to automate the construction of a Bayesian network (BN). This enables the application of the junction tree algorithm to perform reliability analysis and quantify complexity based on a network topology. To further tackle SRA challenges associated with fully correlated seismic uncertainties, we propose to combine a cross entropy-based adaptive importance sampling technique with Rao-Blackwellization.",
-      "releaseDate": "2025-04-30",
+      "releaseDate": "2025-08",
       "url": "https://doi.org/10.1002/eqe.4362",
       "summary": "Earthquake Engineering & Structural Dynamics"
     }
