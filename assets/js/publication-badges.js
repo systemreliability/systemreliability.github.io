@@ -26,17 +26,32 @@
     badge.className = "altmetric-embed";
     badge.dataset.badgeType = "2";
     badge.dataset.badgePopover = "right";
+    badge.dataset.hideNoMentions = "true";
     badge.dataset.doi = doi;
     badges.prepend(badge);
+  };
+
+  const getOpenAlexUiUrl = (workId) => workId.replace("https://api.openalex.org/", "https://openalex.org/");
+
+  const resolveOpenAlexLink = async (link, apiUrl) => {
+    try {
+      const response = await fetch(apiUrl);
+      if (!response.ok) return;
+
+      const work = await response.json();
+      if (work.id) link.href = getOpenAlexUiUrl(work.id);
+    } catch {
+      // Keep the DOI fallback if OpenAlex lookup is unavailable.
+    }
   };
 
   const addOpenAlexBadge = (badges, doi) => {
     if (badges.querySelector(".openalex-badge")) return;
 
-    const apiUrl = `https://api.openalex.org/works/https://doi.org/${doi}?select=cited_by_count`;
+    const apiUrl = `https://api.openalex.org/works/https://doi.org/${doi}?select=id,cited_by_count`;
     const link = document.createElement("a");
     link.className = "openalex-badge";
-    link.href = `https://openalex.org/search?q=${encodeURIComponent(`doi:${doi}`)}`;
+    link.href = `https://doi.org/${doi}`;
     link.setAttribute("aria-label", "OpenAlex link");
     link.setAttribute("role", "button");
     link.rel = "external nofollow noopener";
@@ -49,7 +64,15 @@
     image.alt = "OpenAlex citation count";
 
     link.appendChild(image);
-    badges.appendChild(link);
+
+    const plumxBadge = badges.querySelector(".plumx-plum-print-popup");
+    if (plumxBadge) {
+      badges.insertBefore(link, plumxBadge);
+    } else {
+      badges.appendChild(link);
+    }
+
+    resolveOpenAlexLink(link, apiUrl);
   };
 
   document.querySelectorAll(".bibliography li > .row > [id]").forEach((entry) => {
