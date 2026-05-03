@@ -1,0 +1,33 @@
+/*******************************************************************************
+ * Styles for publication metric badges.
+ ******************************************************************************/
+
+.publications {
+  ol.bibliography {
+    li {
+      .badges {
+        --publication-badge-gap: 0.3rem;
+        --dimensions-badge-scale: 0.92;
+        --dimensions-badge-offset-y: 1px;
+
+        align-items: center;
+        gap: var(--publication-badge-gap);
+
+        span {
+          padding-right: 0;
+        }
+
+        .__dimensions_badge_embed__ {
+          line-height: 1;
+          transform: translateY(var(--dimensions-badge-offset-y)) scale(var(--dimensions-badge-scale));
+          transform-origin: left center;
+
+          iframe,
+          img {
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+}
