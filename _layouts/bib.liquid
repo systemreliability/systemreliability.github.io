@@ -298,7 +298,7 @@
         or entry_has_plumx_badge
         or entry_has_inspirehep_badge
       %}
-        <div class="badges d-inline-flex align-items-center" style="gap:0.35rem;">
+        <div class="badges d-inline-flex align-items-center">
           {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span
               class="altmetric-embed"
@@ -329,7 +329,6 @@
                 data-pmid="{{ entry.pmid }}"
               {% endif %}
               data-style="small_rectangle"
-              style="margin-bottom: 3px;"
             ></span>
           {% endif %}
           {% if entry_has_openalex_badge %}
