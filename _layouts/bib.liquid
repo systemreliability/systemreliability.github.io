@@ -253,13 +253,17 @@
     </div>
     {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = false %}
-      {% if entry.altmetric and entry.altmetric != 'false' %}
-        {% assign entry_has_altmetric_badge = true %}
+      {% if entry.altmetric != 'false' %}
+        {% if entry.altmetric or entry.arxiv or entry.eprint or entry.doi or entry.pmid or entry.isbn %}
+          {% assign entry_has_altmetric_badge = true %}
+        {% endif %}
       {% endif %}
 
       {% assign entry_has_dimensions_badge = false %}
-      {% if entry.dimensions and entry.dimensions != 'false' %}
-        {% assign entry_has_dimensions_badge = true %}
+      {% if entry.dimensions != 'false' %}
+        {% if entry.doi or entry.pmid %}
+          {% assign entry_has_dimensions_badge = true %}
+        {% endif %}
       {% endif %}
 
       {% assign entry_has_google_scholar_badge = false %}
@@ -267,17 +271,34 @@
         {% assign entry_has_google_scholar_badge = true %}
       {% endif %}
 
+      {% assign entry_has_openalex_badge = false %}
+      {% if entry.openalex_id %}
+        {% assign entry_has_openalex_badge = true %}
+      {% endif %}
+
+      {% assign entry_has_plumx_badge = false %}
+      {% if entry.doi %}
+        {% assign entry_has_plumx_badge = true %}
+      {% endif %}
+
       {% assign entry_has_inspirehep_badge = false %}
       {% if entry.inspirehep_id %}
         {% assign entry_has_inspirehep_badge = true %}
       {% endif %}
-      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge or entry_has_inspirehep_badge %}
+      {% if entry_has_altmetric_badge
+        or entry_has_dimensions_badge
+        or entry_has_google_scholar_badge
+        or entry_has_openalex_badge
+        or entry_has_plumx_badge
+        or entry_has_inspirehep_badge
+      %}
         <div class="badges d-inline-flex align-items-center" style="gap:0.35rem;">
           {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span
               class="altmetric-embed"
               data-badge-type="2"
               data-badge-popover="right"
+              data-hide-no-mentions="true"
               {% if entry.altmetric != blank and entry.altmetric != 'true' %}
                 data-altmetric-id="{{ entry.altmetric }}"
               {% elsif entry.arxiv %}
@@ -293,7 +314,21 @@
               {% endif %}
             ></span>
           {% endif %}
-          {% if entry.abstract != blank %}
+          {% if entry_has_openalex_badge %}
+            {% capture openalex_api_url %}https://api.openalex.org/works/{{ entry.openalex_id }}?select=cited_by_count{% endcapture %}
+            <a
+              class="openalex-badge"
+              href="https://openalex.org/works/{{ entry.openalex_id }}"
+              aria-label="OpenAlex link"
+              role="button"
+            >
+              <img
+                src="https://img.shields.io/badge/dynamic/json?url={{ openalex_api_url | url_encode }}&query=$.cited_by_count&label=OpenAlex&color=2f7f6f&labelColor=beige"
+                alt="OpenAlex citation count"
+              >
+            </a>
+          {% endif %}
+          {% if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
             <span
               class="__dimensions_badge_embed__"
               {% if entry.doi %}
@@ -335,7 +370,7 @@
               >
             </a>
           {% endif %}
-          {% if entry.doi %}
+          {% if site.enable_publication_badges.plumx and entry_has_plumx_badge %}
             <a
               href="https://plu.mx/a/?doi={{ entry.doi }}"
               aria-label="PlumX Metrics Detail Page"
