@@ -9,6 +9,7 @@
         --publication-badge-gap: 0.1rem;
         --dimensions-badge-scale: 0.92;
         --dimensions-badge-offset-y: 1px;
+        --openalex-scholar-gap: 0.35rem;
 
         align-items: center;
         gap: var(--publication-badge-gap);
@@ -26,6 +27,10 @@
           img {
             vertical-align: middle;
           }
+        }
+
+        .openalex-badge + .google-scholar-badge {
+          margin-left: var(--openalex-scholar-gap);
         }
       }
     }
