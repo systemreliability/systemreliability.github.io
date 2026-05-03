@@ -19,18 +19,13 @@ MAX_RETRIES = 3
 # Create data directory if it doesn't exist
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-def get_scholar_citations():
-    """
-    Fetch citation data from Google Scholar for all papers by the specified author
-    """
-    print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
 
+def load_existing_citation_data():
     citation_data = {
         'metadata': {},
         'papers': {}
     }
 
-    # Try to load existing data first to preserve the last known good values.
     if os.path.exists(OUTPUT_FILE):
         try:
             with open(OUTPUT_FILE, 'r') as f:
@@ -42,6 +37,32 @@ def get_scholar_citations():
                         citation_data['papers'] = existing_data['papers']
         except Exception as e:
             print(f"Warning: Could not read existing citation data: {e}")
+
+    return citation_data
+
+
+def save_citation_data(citation_data):
+    with open(OUTPUT_FILE, 'w') as f:
+        yaml.dump(citation_data, f, default_flow_style=False, sort_keys=False)
+    print(f"Citation data saved to {OUTPUT_FILE}")
+
+
+def record_fetch_failure(error):
+    citation_data = load_existing_citation_data()
+    citation_data['metadata']['fetch_status'] = 'failed'
+    citation_data['metadata']['fetch_failed_at'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    citation_data['metadata']['fetch_error'] = str(error)
+    save_citation_data(citation_data)
+
+
+def get_scholar_citations():
+    """
+    Fetch citation data from Google Scholar for all papers by the specified author
+    """
+    print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
+
+    # Try to load existing data first to preserve the last known good values.
+    citation_data = load_existing_citation_data()
 
     # Fetch author data with retries
     author_data = None
@@ -110,13 +131,14 @@ def get_scholar_citations():
     if fetched_papers == 0:
         raise RuntimeError("Google Scholar fetch completed but no publications could be processed")
 
+    citation_data['metadata'].pop('fetch_failed_at', None)
+    citation_data['metadata'].pop('fetch_error', None)
+    citation_data['metadata']['fetch_status'] = 'success'
     citation_data['metadata']['last_updated'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     # Save to YAML file
     try:
-        with open(OUTPUT_FILE, 'w') as f:
-            yaml.dump(citation_data, f, default_flow_style=False, sort_keys=False)
-        print(f"Citation data saved to {OUTPUT_FILE}")
+        save_citation_data(citation_data)
     except Exception as e:
         print(f"Error saving citation data: {str(e)}")
         raise
@@ -124,4 +146,8 @@ def get_scholar_citations():
     return citation_data
 
 if __name__ == "__main__":
-    get_scholar_citations()
+    try:
+        get_scholar_citations()
+    except Exception as e:
+        record_fetch_failure(e)
+        raise
