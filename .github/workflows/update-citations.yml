@@ -26,15 +26,25 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run citation update script
+        id: update_citations
+        continue-on-error: true
         run: |
           python bin/update_scholar_citations.py
 
       - name: Configure Git
+        if: always()
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
 
       - name: Commit and push if changed
+        if: always()
         run: |
           git add _data/citations.yml
           git diff --staged --quiet || (git commit -m "Update Google Scholar citations" && git push)
+
+      - name: Fail if citation update failed
+        if: steps.update_citations.outcome == 'failure'
+        run: |
+          echo "Google Scholar citation update failed; failure metadata was recorded in _data/citations.yml."
+          exit 1
