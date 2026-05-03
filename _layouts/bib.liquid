@@ -252,6 +252,12 @@
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
+      {% assign thesis_types = 'thesis,mastersthesis,phdthesis' | split: ',' %}
+      {% assign entry_is_thesis = false %}
+      {% if thesis_types contains entry.type %}
+        {% assign entry_is_thesis = true %}
+      {% endif %}
+
       {% assign entry_has_altmetric_badge = false %}
       {% if entry.altmetric != 'false' %}
         {% if entry.altmetric or entry.arxiv or entry.eprint or entry.doi or entry.pmid or entry.isbn %}
@@ -260,7 +266,7 @@
       {% endif %}
 
       {% assign entry_has_dimensions_badge = false %}
-      {% if entry.dimensions != 'false' %}
+      {% if entry.dimensions != 'false' and entry_is_thesis == false %}
         {% if entry.doi or entry.pmid %}
           {% assign entry_has_dimensions_badge = true %}
         {% endif %}
@@ -314,6 +320,18 @@
               {% endif %}
             ></span>
           {% endif %}
+          {% if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
+            <span
+              class="__dimensions_badge_embed__"
+              {% if entry.doi %}
+                data-doi="{{ entry.doi }}"
+              {% else %}
+                data-pmid="{{ entry.pmid }}"
+              {% endif %}
+              data-style="small_rectangle"
+              style="margin-bottom: 3px;"
+            ></span>
+          {% endif %}
           {% if entry_has_openalex_badge %}
             {% capture openalex_api_url %}https://api.openalex.org/works/{{ entry.openalex_id }}?select=cited_by_count{% endcapture %}
             <a
@@ -327,18 +345,6 @@
                 alt="OpenAlex citation count"
               >
             </a>
-          {% endif %}
-          {% if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
-            <span
-              class="__dimensions_badge_embed__"
-              {% if entry.doi %}
-                data-doi="{{ entry.doi }}"
-              {% else %}
-                data-pmid="{{ entry.pmid }}"
-              {% endif %}
-              data-style="small_rectangle"
-              style="margin-bottom: 3px;"
-            ></span>
           {% endif %}
           {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
             <a
