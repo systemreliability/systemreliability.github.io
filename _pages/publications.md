@@ -23,4 +23,4 @@ nav_order: 2
 
 </div>
 
-<script src="{{ '/assets/js/publication-badges.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/publication-badges.js' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}"></script>
