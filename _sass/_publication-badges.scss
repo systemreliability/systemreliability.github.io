@@ -9,7 +9,7 @@
         --publication-badge-gap: 0rem;
         --dimensions-badge-scale: 0.92;
         --dimensions-badge-offset-y: 1px;
-        --openalex-scholar-gap: 0.8rem;
+        --openalex-scholar-gap: 0.9rem;
 
         align-items: center;
         gap: var(--publication-badge-gap);
@@ -29,8 +29,18 @@
           }
         }
 
+        .openalex-badge,
+        .google-scholar-badge {
+          display: inline-flex;
+          align-items: center;
+
+          img {
+            display: block;
+          }
+        }
+
         .openalex-badge ~ .google-scholar-badge {
-          margin-left: var(--openalex-scholar-gap);
+          margin-left: var(--openalex-scholar-gap, 0.9rem) !important;
         }
       }
     }
