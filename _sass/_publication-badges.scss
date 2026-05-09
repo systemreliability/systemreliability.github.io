@@ -9,7 +9,9 @@
         --publication-badge-gap: 0rem;
         --dimensions-badge-scale: 1.05;
         --dimensions-badge-offset-y: 1px;
-        --openalex-scholar-gap: 0.9rem;
+        --dimensions-openalex-gap: 0.35rem;
+        --openalex-scholar-gap: 0.45rem;
+        --metric-badge-height: 20px;
 
         align-items: center;
         gap: var(--publication-badge-gap);
@@ -29,24 +31,25 @@
           }
         }
 
-        .openalex-badge img {
-          height: 20px;
-          width: auto;
-        }
-        
-        .google-scholar-badge img {
-          height: 20px;
-          width: auto;
+        .openalex-badge,
+        .google-scholar-badge {
           display: inline-flex;
           align-items: center;
+        }
 
-          img {
-            display: block;
-          }
+        .openalex-badge {
+          margin-left: var(--dimensions-openalex-gap);
+        }
+
+        .openalex-badge img,
+        .google-scholar-badge img {
+          display: block;
+          height: var(--metric-badge-height);
+          width: auto;
         }
 
         .openalex-badge ~ .google-scholar-badge {
-          margin-left: var(--openalex-scholar-gap, 0.9rem) !important;
+          margin-left: var(--openalex-scholar-gap, 0.45rem) !important;
         }
       }
     }
