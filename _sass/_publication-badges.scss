@@ -29,8 +29,14 @@
           }
         }
 
-        .openalex-badge,
-        .google-scholar-badge {
+        .openalex-badge img {
+          height: 20px;
+          width: auto;
+        }
+        
+        .google-scholar-badge img {
+          height: 20px;
+          width: auto;
           display: inline-flex;
           align-items: center;
 
