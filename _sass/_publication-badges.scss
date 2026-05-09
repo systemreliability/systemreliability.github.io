@@ -7,9 +7,9 @@
     li {
       .badges {
         --publication-badge-gap: 0rem;
-        --dimensions-badge-scale: 0.92;
+        --dimensions-badge-scale: 1;
         --dimensions-badge-offset-y: 1px;
-        --openalex-scholar-gap: 0.9rem;
+        --openalex-scholar-gap: 0.7rem;
 
         align-items: center;
         gap: var(--publication-badge-gap);
