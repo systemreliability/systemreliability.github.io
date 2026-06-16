@@ -8,12 +8,12 @@ papers:
     title: Efficient seismic reliability and fragility analysis of lifeline networks
       using subset simulation
     year: "2025"
-    citations: 39
+    citations: 41
   cLfMY9wAAAAJ:UeHWp8X0CEIC:
     title: Risk-informed operation and maintenance of complex lifeline systems using
       parallelized multi-agent deep Q-network
     year: "2023"
-    citations: 24
+    citations: 25
   cLfMY9wAAAAJ:qjMakFHDy7sC:
     title: Multi-scale seismic reliability assessment of networks by centrality-based
       selective recursive decomposition algorithm
