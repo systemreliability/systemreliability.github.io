@@ -1,5 +1,5 @@
 metadata:
-  last_updated: "2026-06-21 00:00:00"
+  last_updated: "2026-06-25 00:00:00"
   fetch_status: failed
   fetch_failed_at: "2026-05-04 04:12:40"
   fetch_error: All Google Scholar fetch retries failed
@@ -23,7 +23,7 @@ papers:
     title: "Seismic performance management of aging road facilities in Korea: Part
       2 - decision-making support technology and its application"
     year: "2024"
-    citations: 4
+    citations: 5
   cLfMY9wAAAAJ:Y5dfb0dijaUC:
     title: Network reliability analysis and complexity quantification using Bayesian
       network and dual representation
