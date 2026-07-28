@@ -21,7 +21,42 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
+            window.location.href = "/de/cv/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/it/cv/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "",
+          section: "Navigation",
+          handler: () => {
             window.location.href = "/ko/cv/";
+          },
+        },{id: "nav-简历",
+          title: "简历",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/zh/cv/";
+          },
+        },{id: "nav-publikationen",
+          title: "Publikationen",
+          description: "Begutachtete Zeitschriftenartikel, Dissertation und Konferenzbeiträge.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/de/publications/";
+          },
+        },{id: "nav-pubblicazioni",
+          title: "Pubblicazioni",
+          description: "Articoli scientifici sottoposti a revisione paritaria, tesi e atti di conferenze.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/it/publications/";
           },
         },{id: "nav-연구-성과",
           title: "연구 성과",
@@ -29,6 +64,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/ko/publications/";
+          },
+        },{id: "nav-学术成果",
+          title: "学术成果",
+          description: "同行评审期刊论文、学位论文及会议论文。",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/zh/publications/";
           },
         },{id: "nav-publications",
           title: "Publications",
@@ -44,12 +86,33 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-projekte",
+          title: "Projekte",
+          description: "Eine fortlaufend aktualisierte Sammlung meiner Forschungsprojekte.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/de/projects/";
+          },
+        },{id: "nav-progetti",
+          title: "Progetti",
+          description: "Una raccolta in continuo aggiornamento di progetti di ricerca.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/it/projects/";
+          },
         },{id: "nav-연구",
           title: "연구",
           description: "주요 연구 프로젝트 및 연구 활동",
           section: "Navigation",
           handler: () => {
             window.location.href = "/ko/projects/";
+          },
+        },{id: "nav-研究项目",
+          title: "研究项目",
+          description: "持续更新的研究项目合集。",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/zh/projects/";
           },
         },{id: "nav-teaching",
           title: "Teaching",
@@ -58,12 +121,33 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
+        },{id: "nav-lehre",
+          title: "Lehre",
+          description: "Lehrveranstaltungen, die ich gehalten oder mitentwickelt habe.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/de/teaching/";
+          },
+        },{id: "nav-didattica",
+          title: "Didattica",
+          description: "Attività didattiche e corsi.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/it/teaching/";
+          },
         },{id: "nav-교육",
           title: "교육",
           description: "강의 및 교육 활동",
           section: "Navigation",
           handler: () => {
             window.location.href = "/ko/teaching/";
+          },
+        },{id: "nav-教学",
+          title: "教学",
+          description: "本人讲授或参与开发的课程。",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/zh/teaching/";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',
