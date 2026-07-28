@@ -5,7 +5,7 @@ permalink: /de/
 lang: de
 translation_key: about
 
-subtitle: Postdoktorand am <a href="https://www.dicam.unitn.it/en">Department of Civil, Environmental and Mechanical Engineering</a> der <a href="https://www.unitn.it/en">Universität Trient</a>.
+subtitle: Postdoktorand am <a href="https://www.dicam.unitn.it/en">Fachbereich Bauingenieurwesen, Umwelttechnik und Maschinenbau</a> der <a href="https://www.unitn.it/en">Universität Trient</a>.
 
 profile:
   align: right
@@ -30,7 +30,7 @@ latest_posts:
   limit: 6
 ---
 
-**Dr. Dongkyu Lee** erwarb seinen Bachelor- und Doktorgrad im Bau- und Umweltingenieurwesen an der [Seoul National University](https://en.snu.ac.kr/) (SNU). Anschließend war er als Postdoktorand an der [SNU](https://icee.snu.ac.kr/) (2023-2024) und an der [Technische Universität München](https://www.tum.de/) (TUM) (2024-2025) tätig. Danach wechselte er an die [University of Trento](https://www.unitn.it/en) (UNITN), wo er als **Postdoktorand forscht**.
+**Dr. Dongkyu Lee** erwarb seinen Bachelor- und Doktorgrad im Bau- und Umweltingenieurwesen an der [Staatliche Universität Seoul](https://en.snu.ac.kr/) (SNU). Anschließend war er als Postdoktorand an der [SNU](https://icee.snu.ac.kr/) (2023-2024) und an der [Technische Universität München](https://www.tum.de/) (TUM) (2024-2025) tätig. Danach wechselte er an die [Universität Trient](https://www.unitn.it/en) (UNITN), wo er als **Postdoktorand forscht**.
 
 Seine Forschung basiert auf einem breiten methodischen Hintergrund, der unter anderem **Graphentheorie**, **Deep Reinforcement Learning**, **Bayessche Netze** und **Varianzreduktionstechniken** (Importance Sampling, Subset Simulation usw.) umfasst. Seine Forschungsschwerpunkte sind:
 

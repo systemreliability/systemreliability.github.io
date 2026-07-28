@@ -10,7 +10,7 @@ lang: ko
 translation_key: teaching
 ---
 
-#### Teaching Assistant (University of Trento)
+#### Teaching Assistant (트렌토대학교)
 
 - 140664 Risk analysis and structural reliability (2026년 봄학기, Prof. Marco Broccardo)
 
@@ -18,7 +18,7 @@ translation_key: teaching
 
 - 457.212 Statistics for Civil & Environmental Engineers (2019년 가을학기, Prof. Junho Song)
 - 457.643 Structural Random Vibrations (2022년 가을학기, Prof. Junho Song)
-- M2177.005600 Global Interchange Lecture on Engineering Technology 2 (2024년 여름학기, Prof. Wataru Takeuchi @ University of Tokyo)
+- M2177.005600 Global Interchange Lecture on Engineering Technology 2 (2024년 여름학기, Prof. Wataru Takeuchi @ 도쿄대학교)
 
 #### Developing class materials (서울대학교)
 

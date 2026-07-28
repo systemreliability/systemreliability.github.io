@@ -17,7 +17,7 @@ translation_key: teaching
 
 - 457.212 Statistics for Civil & Environmental Engineers (2019年秋季学期，Prof. Junho Song)
 - 457.643 Structural Random Vibrations (2022年秋季学期，Prof. Junho Song)
-- M2177.005600 Global Interchange Lecture on Engineering Technology 2 (2024年夏季学期, Prof. Wataru Takeuchi @ University of Tokyo)
+- M2177.005600 Global Interchange Lecture on Engineering Technology 2 (2024年夏季学期, Prof. Wataru Takeuchi @ 東京大學)
 
 #### 开发课程材料 (首尔大学)
 

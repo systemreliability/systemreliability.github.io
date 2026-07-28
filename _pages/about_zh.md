@@ -5,7 +5,7 @@ permalink: /zh/
 lang: zh
 translation_key: about
 
-subtitle: 博士后研究员，<a href="https://www.dicam.unitn.it/en">Department of Civil, Environmental and Mechanical Engineering</a>，<a href="https://www.unitn.it/en">University of Trento</a>。
+subtitle: 博士后研究员，<a href="https://www.dicam.unitn.it/en">土木环境与机械工程系</a>，<a href="https://www.unitn.it/en">特伦托大学</a>。
 
 profile:
   align: right
