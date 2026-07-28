@@ -1,0 +1,85 @@
+name: Prettier code formatter
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+  pull_request:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      # -------------------------------------------------------
+      # Checkout
+      # -------------------------------------------------------
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # -------------------------------------------------------
+      # Node.js
+      # -------------------------------------------------------
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # -------------------------------------------------------
+      # Install dependencies
+      # -------------------------------------------------------
+      - name: Install dependencies
+        run: npm ci
+
+      # -------------------------------------------------------
+      # Automatically format files
+      # -------------------------------------------------------
+      - name: Run Prettier
+        run: npx prettier . --write
+
+      # -------------------------------------------------------
+      # Show what Prettier changed
+      # -------------------------------------------------------
+      - name: Show formatting changes
+        run: git diff --stat
+
+      # -------------------------------------------------------
+      # Commit + push formatted files
+      #
+      # Only push automatically when the workflow was triggered
+      # by a direct push, not by a pull request.
+      # -------------------------------------------------------
+      - name: Commit formatted files
+        if: github.event_name == 'push'
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+            git add -A
+            git commit -m "style: auto-format with Prettier"
+            git push
+          else
+            echo "No formatting changes."
+          fi
+
+      # -------------------------------------------------------
+      # For PRs, only verify that Prettier produced no changes.
+      # -------------------------------------------------------
+      - name: Check formatting on pull request
+        if: github.event_name == 'pull_request'
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "Prettier formatting changes are required."
+            git diff
+            exit 1
+          fi
