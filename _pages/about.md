@@ -2,6 +2,8 @@
 layout: about
 title: About
 permalink: /
+lang: en
+translation_key: about
 subtitle: Postdoctoral Researcher. <a href="https://www.dicam.unitn.it/en"> Department of civil, environmental and mechanical engineering</a>, <a href="https://www.unitn.it/en"> University of Trento</a>.
 
 profile:
@@ -35,4 +37,4 @@ He has a broad academical background in **Graph theory**, **Deep reinforcement l
 - Risk-informed maintenance strategies for lifeline networks
 - Application of statistical/machine learning techniques for urban infrastructure systems
 
-He has presented [his research outcomes](/publications/) through 5 papers published in peer-reviewed archival journals, and 21 conference/workshop presentations (7 domestic, 14 international).
+He has presented [his research outcomes](/publications/) through 5 papers published in peer-reviewed archival journals, and 22 conference/workshop presentations (7 domestic, 15 international).

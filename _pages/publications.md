@@ -5,6 +5,9 @@ title: Publications
 description: Peer-reviewed Journals, Thesis & Proceedings of Conferences.
 nav: true
 nav_order: 2
+
+lang: en
+translation_key: publications
 ---
 
 <!-- _pages/publications.md -->

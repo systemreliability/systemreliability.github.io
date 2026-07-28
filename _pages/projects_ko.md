@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Projects
-permalink: /projects/
-description: A growing collection of projects.
+title: 연구
+permalink: /ko/projects/
+description: 주요 연구 프로젝트 및 연구 활동
 nav: true
 nav_order: 3
 
-lang: en
+lang: ko
 translation_key: projects
 
 display_categories: [Research, Fellowship]

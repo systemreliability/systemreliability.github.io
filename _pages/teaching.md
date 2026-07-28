@@ -5,6 +5,9 @@ title: Teaching
 description: Courses that I Taught or Codeveloped.
 nav: true
 nav_order: 4
+
+lang: en
+translation_key: teaching
 ---
 
 #### Teaching Assistant (University of Trento)

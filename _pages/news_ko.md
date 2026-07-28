@@ -1,8 +1,8 @@
 ---
 layout: page
-title: News
-permalink: /news/
-lang: en
+title: 뉴스
+permalink: /ko/news/
+lang: ko
 translation_key: news
 ---
 

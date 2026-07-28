@@ -60,7 +60,11 @@ layout: default
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+        {% if page.lang == 'ko' %}
+          <a href="{{ '/ko/news/' | relative_url }}" style="color: inherit">뉴스</a>
+        {% else %}
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+        {% endif %}
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -68,7 +72,11 @@ layout: default
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
+        {% if page.lang == 'ko' %}
+          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">최근 포스트</a>
+        {% else %}
+          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
+        {% endif %}
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
@@ -76,7 +84,11 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+        {% if page.lang == 'ko' %}
+          <a href="{{ '/ko/publications/' | relative_url }}" style="color: inherit">주요 논문</a>
+        {% else %}
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+        {% endif %}
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
