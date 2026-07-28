@@ -1,16 +1,65 @@
 ---
 layout: default
 ---
+
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign t = site.data.i18n[current_lang] %}
+
+{% unless t %}
+  {% assign t = site.data.i18n[site.lang] %}
+{% endunless %}
+
+{% comment %}
+  Find the News page corresponding to the current language.
+  Falls back to the English/default News page if unavailable.
+{% endcomment %}
+{% assign news_pages = site.pages | where: 'translation_key', 'news' %}
+{% assign news_candidates = news_pages | where: 'lang', current_lang %}
+{% assign current_news = news_candidates | first %}
+
+{% assign news_url = '/news/' %}
+{% if current_news %}
+  {% assign news_url = current_news.url %}
+{% endif %}
+
+{% comment %}
+  Find the Publications page corresponding to the current language.
+  Falls back to the English/default Publications page if unavailable.
+{% endcomment %}
+{% assign publication_pages = site.pages | where: 'translation_key', 'publications' %}
+{% assign publication_candidates = publication_pages | where: 'lang', current_lang %}
+{% assign current_publications = publication_candidates | first %}
+
+{% assign publications_url = '/publications/' %}
+{% if current_publications %}
+  {% assign publications_url = current_publications.url %}
+{% endif %}
+
+{% comment %}
+  Find a localized Blog page if one exists.
+  Otherwise all languages use /blog/.
+{% endcomment %}
+{% assign blog_url = '/blog/' %}
+{% assign blog_pages = site.pages | where: 'translation_key', 'blog' %}
+{% assign blog_candidates = blog_pages | where: 'lang', current_lang %}
+{% assign current_blog = blog_candidates | first %}
+
+{% if current_blog %}
+  {% assign blog_url = current_blog.url %}
+{% endif %}
+
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
       {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+        <span class="font-weight-bold">{{ site.first_name }}</span>
+        {{ site.middle_name }}
         {{ site.last_name }}
       {% else %}
         {{ site.title }}
       {% endif %}
     </h1>
+
     <p class="desc">{{ page.subtitle }}</p>
   </header>
 
@@ -27,78 +76,104 @@ layout: default
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
 
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+          {% capture sizes %}
+            (min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3 }}px,
+            (min-width: 576px) 30vw,
+            95vw
+          {% endcapture %}
 
           {% if page.profile.image_hover %}
             <div class="profile-hover-swap">
               {%
-                include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+                include figure.liquid
+                loading="eager"
+                path=profile_image_path
+                class=profile_image_class
+                sizes=sizes
+                alt=page.profile.image
                 cache_bust=true
               %}
+
               <div class="hover-img">
                 {%
-                  include figure.liquid loading="eager" path=profile_image_hover_path class=profile_image_class sizes=sizes alt=page.profile.image_hover
+                  include figure.liquid
+                  loading="eager"
+                  path=profile_image_hover_path
+                  class=profile_image_class
+                  sizes=sizes
+                  alt=page.profile.image_hover
                   cache_bust=true
                 %}
               </div>
             </div>
           {% else %}
             {%
-              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              include figure.liquid
+              loading="eager"
+              path=profile_image_path
+              class=profile_image_class
+              sizes=sizes
+              alt=page.profile.image
               cache_bust=true
             %}
           {% endif %}
         {% endif %}
+
         {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+          <div class="more-info">
+            {{ page.profile.more_info }}
+          </div>
         {% endif %}
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="clearfix">
+      {{ content }}
+    </div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        {% if page.lang == 'ko' %}
-          <a href="{{ '/ko/news/' | relative_url }}" style="color: inherit">뉴스</a>
-        {% else %}
-          <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
-        {% endif %}
+        <a href="{{ news_url | relative_url }}" style="color: inherit">
+          {{ t.news | default: 'News' }}
+        </a>
       </h2>
+
       {% include news.liquid limit=true %}
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <h2>
-        {% if page.lang == 'ko' %}
-          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">최근 포스트</a>
-        {% else %}
-          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
-        {% endif %}
+        <a href="{{ blog_url | relative_url }}" style="color: inherit">
+          {{ t.latest_posts | default: 'Latest Posts' }}
+        </a>
       </h2>
+
       {% include latest_posts.liquid %}
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        {% if page.lang == 'ko' %}
-          <a href="{{ '/ko/publications/' | relative_url }}" style="color: inherit">주요 논문</a>
-        {% else %}
-          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-        {% endif %}
+        <a href="{{ publications_url | relative_url }}" style="color: inherit">
+          {{ t.selected_publications | default: 'Selected Publications' }}
+        </a>
       </h2>
+
       {% include selected_papers.liquid %}
     {% endif %}
 
     <!-- Social -->
     {% if page.social %}
       <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
+        <div class="contact-icons">
+          {% include social.liquid %}
+        </div>
 
-        <div class="contact-note">{{ site.contact_note }}</div>
+        <div class="contact-note">
+          {{ site.contact_note }}
+        </div>
       </div>
     {% endif %}
 
