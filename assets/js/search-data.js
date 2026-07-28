@@ -16,6 +16,20 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/ko/cv/";
+          },
+        },{id: "nav-연구-성과",
+          title: "연구 성과",
+          description: "학위논문, 국제학술지 논문 및 학술대회 발표",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/ko/publications/";
+          },
         },{id: "nav-publications",
           title: "Publications",
           description: "Peer-reviewed Journals, Thesis &amp; Proceedings of Conferences.",
@@ -30,12 +44,26 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-연구",
+          title: "연구",
+          description: "주요 연구 프로젝트 및 연구 활동",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/ko/projects/";
+          },
         },{id: "nav-teaching",
           title: "Teaching",
           description: "Courses that I Taught or Codeveloped.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
+          },
+        },{id: "nav-교육",
+          title: "교육",
+          description: "강의 및 교육 활동",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/ko/teaching/";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',
