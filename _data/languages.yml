@@ -1,0 +1,19 @@
+en:
+  name: English
+  prefix: ""
+
+ko:
+  name: 한국어
+  prefix: /ko
+
+de:
+  name: Deutsch
+  prefix: /de
+
+it:
+  name: Italiano
+  prefix: /it
+
+zh:
+  name: 中文
+  prefix: /zh

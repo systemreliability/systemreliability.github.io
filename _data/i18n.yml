@@ -1,0 +1,24 @@
+en:
+  news: News
+  latest_posts: Latest Posts
+  selected_publications: Selected Publications
+
+ko:
+  news: 뉴스
+  latest_posts: 최근 포스트
+  selected_publications: 주요 논문
+
+it:
+  news: Notizie
+  latest_posts: Ultimi post
+  selected_publications: Pubblicazioni selezionate
+
+de:
+  news: Nachrichten
+  latest_posts: Neueste Beiträge
+  selected_publications: Ausgewählte Veröffentlichungen
+
+zh:
+  news: 新闻
+  latest_posts: 最新文章
+  selected_publications: 精选出版物

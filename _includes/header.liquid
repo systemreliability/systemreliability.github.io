@@ -1,38 +1,58 @@
 <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
+  <nav
+    id="navbar"
+    class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}"
+    role="navigation"
+  >
     <div class="container">
+
+      {% comment %}
+      ============================================================
+      Current language
+      ============================================================
+      {% endcomment %}
+
       {% assign current_lang = page.lang | default: site.lang %}
 
-      {% assign about_pages = site.pages | where: 'translation_key', 'about' %}
-      {% assign english_about = about_pages | where: 'lang', 'en' | first %}
-      {% assign korean_about = about_pages | where: 'lang', 'ko' | first %}
+      {% comment %}
+      ============================================================
+      Find the About/Home page for the current language.
 
-      {% if current_lang == 'ko' %}
-        {% assign current_home = korean_about %}
-      {% else %}
-        {% assign current_home = english_about %}
-      {% endif %}
+      Expected:
+        about.md     -> lang: en
+        about_ko.md  -> lang: ko
+        about_it.md  -> lang: it
+        about_de.md  -> lang: de
+        about_zh.md  -> lang: zh
+
+      All of them:
+        translation_key: about
+      ============================================================
+      {% endcomment %}
+
+      {% assign about_pages = site.pages | where: 'translation_key', 'about' %}
+      {% assign current_home_candidates = about_pages | where: 'lang', current_lang %}
+      {% assign current_home = current_home_candidates | first %}
+
+      {% comment %}
+      Fallback to the default language if a translated About page
+      does not exist.
+      {% endcomment %}
+
+      {% unless current_home %}
+        {% assign default_home_candidates = about_pages | where: 'lang', site.lang %}
+        {% assign current_home = default_home_candidates | first %}
+      {% endunless %}
 
       {% assign home_url = current_home.url | default: '/' %}
       {% assign about_title = current_home.title | default: 'About' %}
 
-      {% assign english_url = '/' %}
-      {% assign korean_url = '/ko/' %}
-
-      {% if page.translation_key %}
-        {% assign translated_pages = site.pages | where: 'translation_key', page.translation_key %}
-        {% assign english_page = translated_pages | where: 'lang', 'en' | first %}
-        {% assign korean_page = translated_pages | where: 'lang', 'ko' | first %}
-
-        {% if english_page %}
-          {% assign english_url = english_page.url %}
-        {% endif %}
-
-        {% if korean_page %}
-          {% assign korean_url = korean_page.url %}
-        {% endif %}
-      {% endif %}
+      {% comment %}
+      ============================================================
+      Navbar brand
+      ============================================================
+      {% endcomment %}
 
       {% if page.translation_key != 'about' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ home_url | relative_url }}">
@@ -42,9 +62,11 @@
                 {{- site.first_name -}}
               </span>
             {% endif %}
+
             {% if site.middle_name %}
               {{- site.middle_name -}}
             {% endif %}
+
             {% if site.last_name %}
               {{- site.last_name -}}
             {% endif %}
@@ -52,10 +74,14 @@
             {{- site.title -}}
           {% endif %}
         </a>
+
       {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
-        <div class="navbar-brand social">{% include social.liquid %}</div>
+        <div class="navbar-brand social">
+          {% include social.liquid %}
+        </div>
       {% endif %}
+
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed ml-auto"
@@ -74,47 +100,72 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
+
           <!-- About -->
           <li class="nav-item {% if page.translation_key == 'about' %}active{% endif %}">
             <a class="nav-link" href="{{ home_url | relative_url }}">
-              {{- about_title }}
+              {{- about_title -}}
+
               {% if page.translation_key == 'about' %}
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
           </li>
 
-          <!-- Other pages -->
+          {% comment %}
+          ============================================================
+          Other pages
+
+          Only pages matching the current language are displayed.
+          Pages without `lang` are treated as the site's default language.
+          ============================================================
+          {% endcomment %}
+
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
+
           {% for p in sorted_pages %}
             {% assign p_lang = p.lang | default: site.lang %}
+
             {% if p.nav and p.autogen == null and p_lang == current_lang %}
+
               {% if p.dropdown %}
+
                 {% assign has_active_child = false %}
+
                 {% for child in p.children %}
                   {% if page.title == child.title %}
                     {% assign has_active_child = true %}
                   {% endif %}
                 {% endfor %}
+
+                {% assign dropdown_id = 'navbarDropdown-' | append: forloop.index %}
+
                 <li class="nav-item dropdown {% if page.title == p.title or has_active_child %}active{% endif %}">
                   <a
                     class="nav-link dropdown-toggle"
                     href="#"
-                    id="navbarDropdown"
+                    id="{{ dropdown_id }}"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    {{- p.title }}
+                    {{- p.title -}}
+
                     {% if page.title == p.title or has_active_child %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                  <div
+                    class="dropdown-menu dropdown-menu-right"
+                    aria-labelledby="{{ dropdown_id }}"
+                  >
                     {% for child in p.children %}
+
                       {% if child.title == 'divider' %}
                         <div class="dropdown-divider"></div>
+
                       {% else %}
                         <a
                           class="dropdown-item {% if page.title == child.title %}active{% endif %}"
@@ -123,38 +174,67 @@
                           {{- child.title -}}
                         </a>
                       {% endif %}
+
                     {% endfor %}
                   </div>
                 </li>
+
               {% else %}
+
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
+
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
-                  {%- if p.permalink contains '://' -%}
-                    {%- assign url = p.permalink -%}
-                  {%- elsif p.permalink contains '/blog/' -%}
-                    {%- assign url = '/blog/' -%}
-                  {%- else -%}
-                    {%- assign url = p.url -%}
-                  {%- endif %}
+
+                  {% if p.permalink contains '://' %}
+                    {% assign url = p.permalink %}
+                  {% elsif p.permalink contains '/blog/' %}
+                    {% assign url = '/blog/' %}
+                  {% else %}
+                    {% assign url = p.url %}
+                  {% endif %}
+
                   <a class="nav-link" href="{{ url | relative_url }}">
-                    {{- p.title }}
+                    {{- p.title -}}
+
                     {% if page.url contains p.url %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
                 </li>
+
               {% endif %}
+
             {% endif %}
           {% endfor %}
+
+          <!-- Search -->
           {% if site.search_enabled %}
-            <!-- Search -->
             <li class="nav-item">
-              <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
+              <button
+                id="search-toggle"
+                title="Search"
+                onclick="openSearchModal()"
+              >
+                <span class="nav-link">
+                  ctrl k <i class="ti ti-search"></i>
+                </span>
               </button>
             </li>
           {% endif %}
-          <!-- Language selector -->
+
+          {% comment %}
+          ============================================================
+          Language selector
+
+          Languages are read automatically from:
+            _data/languages.yml
+
+          For the current page:
+          1. Try to find the same translation_key in each language.
+          2. If it does not exist, fall back to that language's home page.
+          ============================================================
+          {% endcomment %}
+
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -174,25 +254,67 @@
               class="dropdown-menu dropdown-menu-right"
               aria-labelledby="languageDropdown"
             >
-              <a
-                class="dropdown-item {% if current_lang == 'en' %}active{% endif %}"
-                href="{{ english_url | relative_url }}"
-              >
-                English
-              </a>
 
-              <a
-                class="dropdown-item {% if current_lang == 'ko' %}active{% endif %}"
-                href="{{ korean_url | relative_url }}"
-              >
-                한국어
-              </a>
+              {% for language in site.data.languages %}
+
+                {% assign lang_code = language[0] %}
+                {% assign lang_info = language[1] %}
+                {% assign target_url = nil %}
+
+                {% comment %}
+                First find the translated version of the current page.
+                {% endcomment %}
+
+                {% if page.translation_key %}
+                  {% assign same_key_pages = site.pages | where: 'translation_key', page.translation_key %}
+                  {% assign translated_candidates = same_key_pages | where: 'lang', lang_code %}
+                  {% assign translated_page = translated_candidates | first %}
+
+                  {% if translated_page %}
+                    {% assign target_url = translated_page.url %}
+                  {% endif %}
+                {% endif %}
+
+                {% comment %}
+                If this page has no translation, use that language's
+                About/Home page instead.
+                {% endcomment %}
+
+                {% unless target_url %}
+                  {% assign language_home_candidates = about_pages | where: 'lang', lang_code %}
+                  {% assign language_home = language_home_candidates | first %}
+
+                  {% if language_home %}
+                    {% assign target_url = language_home.url %}
+                  {% elsif lang_info.prefix %}
+                    {% if lang_info.prefix == '' %}
+                      {% assign target_url = '/' %}
+                    {% else %}
+                      {% assign target_url = lang_info.prefix | append: '/' %}
+                    {% endif %}
+                  {% endif %}
+                {% endunless %}
+
+                {% if target_url %}
+                  <a
+                    class="dropdown-item {% if current_lang == lang_code %}active{% endif %}"
+                    href="{{ target_url | relative_url }}"
+                    lang="{{ lang_code }}"
+                  >
+                    {{ lang_info.name }}
+                  </a>
+                {% endif %}
+
+              {% endfor %}
+
             </div>
           </li>
+
         </ul>
       </div>
     </div>
   </nav>
+
   {% if site.enable_progressbar %}
     <!-- Scrolling Progress Bar -->
     <progress id="progress" value="0">
