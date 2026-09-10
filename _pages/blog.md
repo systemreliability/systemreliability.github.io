@@ -71,8 +71,8 @@ pagination:
 <div class="float-right">
 <i class="fa-solid fa-thumbtack fa-xs"></i>
 </div>
-<h3 class="card-title text-lowercase">{{ post.title }}</h3>
-<p class="card-text">{{ post.description }}</p>
+<h3 class="card-title text-lowercase">{{ post.title | external_post_escape: post.external_source }}</h3>
+<p class="card-text">{{ post.description | external_post_escape: post.external_source }}</p>
 
                     {% if post.external_source == blank %}
                       {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
@@ -127,17 +127,17 @@ pagination:
 {% endif %}
         <h3>
         {% if post.redirect == blank %}
-          <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | external_post_escape: post.external_source }}</a>
         {% elsif post.redirect contains '://' %}
-          <a class="post-title" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
+          <a class="post-title" href="{{ post.redirect | escape }}" target="_blank">{{ post.title | external_post_escape: post.external_source }}</a>
           <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         {% else %}
-          <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
+          <a class="post-title" href="{{ post.redirect | relative_url | escape }}">{{ post.title | external_post_escape: post.external_source }}</a>
         {% endif %}
       </h3>
-      <p>{{ post.description }}</p>
+      <p>{{ post.description | external_post_escape: post.external_source }}</p>
       <p class="post-meta">
         {{ read_time }} min read &nbsp; &middot; &nbsp;
         {{ post.date | date: '%B %d, %Y' }}

@@ -55,24 +55,25 @@ ninja.data = [
   {%- if site.posts_in_search -%}
     {%- for post in site.posts -%}
       {
-        {%- assign title = post.title | escape | strip -%}
-        id: "post-{{ title | slugify }}",
+        {%- assign title = post.title | escape_once | strip -%}
+        id: {{ title | slugify | prepend: "post-" | jsonify }},
         {% if post.redirect == blank %}
-          title: "{{ title | truncatewords: 13 }}",
+          title: {{ title | truncatewords: 13 | jsonify }},
         {% elsif post.redirect contains '://' %}
-          title: '{{ title | truncatewords: 13 }} <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          {% capture external_title %}{{ title | truncatewords: 13 }} <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>{% endcapture %}
+          title: {{ external_title | jsonify }},
         {% else %}
-          title: "{{ title | truncatewords: 13 }}",
+          title: {{ title | truncatewords: 13 | jsonify }},
         {% endif %}
-        description: "{{ post.description | strip_html | strip_newlines | escape | strip }}",
+        description: {{ post.description | strip_html | strip_newlines | escape_once | strip | jsonify }},
         section: "Posts",
         handler: () => {
           {% if post.redirect == blank %}
-            window.location.href = "{{ post.url | relative_url }}";
+            window.location.href = {{ post.url | relative_url | jsonify }};
           {% elsif post.redirect contains '://' %}
-            window.open("{{ post.redirect }}", "_blank");
+            window.open({{ post.redirect | jsonify }}, "_blank");
           {% else %}
-            window.location.href = "{{ post.redirect | relative_url }}";
+            window.location.href = {{ post.redirect | relative_url | jsonify }};
           {% endif %}
         },
       },
