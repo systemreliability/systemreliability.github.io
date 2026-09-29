@@ -1,5 +1,5 @@
 metadata:
-  last_updated: "2026-09-18 00:00:00"
+  last_updated: "2026-09-29 00:00:00"
   fetch_status: failed
   fetch_failed_at: "2026-05-04 04:12:40"
   fetch_error: All Google Scholar fetch retries failed
@@ -8,7 +8,7 @@ papers:
     title: Efficient seismic reliability and fragility analysis of lifeline networks
       using subset simulation
     year: "2025"
-    citations: 46
+    citations: 47
   cLfMY9wAAAAJ:UeHWp8X0CEIC:
     title: Risk-informed operation and maintenance of complex lifeline systems using
       parallelized multi-agent deep Q-network
@@ -18,21 +18,21 @@ papers:
     title: Multi-scale seismic reliability assessment of networks by centrality-based
       selective recursive decomposition algorithm
     year: "2021"
-    citations: 24
+    citations: 25
   cLfMY9wAAAAJ:b0M2c_1WBrUC:
     title: "Seismic performance management of aging road facilities in Korea: Part
       2 - decision-making support technology and its application"
     year: "2024"
     citations: 5
-  cLfMY9wAAAAJ:Y5dfb0dijaUC:
-    title: Network reliability analysis and complexity quantification using Bayesian
-      network and dual representation
-    year: "2023"
-    citations: 3
   cLfMY9wAAAAJ:tkaPQYYpVKoC:
     title: Dual graph-based Bayesian network modeling with Rao-Blackwellization for
       seismic reliability and complexity quantification of network connectivity
     year: "2025"
+    citations: 4
+  cLfMY9wAAAAJ:Y5dfb0dijaUC:
+    title: Network reliability analysis and complexity quantification using Bayesian
+      network and dual representation
+    year: "2023"
     citations: 3
   cLfMY9wAAAAJ:hMod-77fHWUC:
     title: Development of seismic reliability analysis methods for large-scale infrastructure
