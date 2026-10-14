@@ -5,7 +5,7 @@ description: Uncertainty-aware digital twins and adaptive seismic risk managemen
 img: assets/img/Fig2_1.png
 importance: 1
 category: Research
-related_publications: true
+related_publications: false
 ---
 
 Deep geothermal energy offers a renewable source of heat and electricity, but its wider deployment faces challenges associated with induced seismicity, uncertain reservoir performance, and economic viability. In [enhanced geothermal systems (EGS)][background], hydraulic stimulation improves the permeability of deep rock formations to enable heat extraction. However, the resulting seismicity must be carefully managed to limit its consequences for surrounding communities and infrastructure. Reliable operational decisions therefore require not only detailed simulations of reservoir behavior, but also a systematic treatment of uncertainty and a connection between monitoring data, predictive models, and seismic risk assessment.
