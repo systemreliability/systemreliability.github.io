@@ -2,7 +2,7 @@
 layout: page
 title: GEOTWINS
 description: Uncertainty-aware digital twins and adaptive seismic risk management for deep geothermal energy
-img: https://deepgeothermal.org/export/sites/deepgeothermal-geotwins/geotwins-images/Fig_1.png
+img: assets/img/Fig2_1.png
 importance: 1
 category: Research
 related_publications: true
@@ -14,15 +14,15 @@ Deep geothermal energy offers a renewable source of heat and electricity, but it
 
 The University of Trento (UNITN) contributes particularly to uncertainty quantification and induced seismic risk management. Within [WP2, Task 2.5][wp2], the research addresses efficient and robust forward and inverse uncertainty quantification for geothermal reservoir models. Forward uncertainty quantification examines how uncertain model inputs affect predicted system behavior, while inverse uncertainty quantification uses observations to constrain uncertain model parameters. UNITN leads the associated [non-intrusive uncertainty quantification framework (D2.5)][deliverables], which is intended to assess the impact of uncertainties within simulation models. This work provides a basis for interpreting model predictions together with their uncertainty, rather than relying exclusively on a single deterministic representation of the reservoir.
 
-UNITN also co-leads [WP3, Hazards, Vulnerability, and Risk Analysis][wp3] with GFZ Potsdam. [Prof. Marco Broccardo][organization] serves as UNITN's work-package lead. A central contribution concerns the extension of Adaptive Traffic Light Systems (ATLS) to multi-stage EGS and post-stimulation conditions (Task 3.4). ATLS update forecasting models as new monitoring data become available, supporting adaptive decisions as seismicity evolves. UNITN leads the associated [deliverable D3.4][deliverables], focusing on testing extended ATLS workflows at project demonstration sites. The broader objective is to support seismic risk management throughout the project life, rather than limiting mitigation to stimulation phases. Together, uncertainty-aware reservoir predictions and adaptive risk assessment are intended to inform operational choices that account for both geothermal performance and seismic safety.
+UNITN also co-leads [WP3 (Hazards, Vulnerability, and Risk Analysis)][wp3] with GFZ Potsdam. [Prof. Marco Broccardo][organization] serves as UNITN's work-package lead. The broader objective is to support seismic risk management throughout the project life, rather than limiting mitigation to stimulation phases. Together, uncertainty-aware reservoir predictions and adaptive risk assessment are intended to inform operational choices that account for both geothermal performance and seismic safety.
 
 <div class="row justify-content-center">
     <div class="col-sm-10 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path=page.img title="GEOTWINS modular digital twin framework" alt="GEOTWINS framework integrating seismic monitoring, reservoir modeling, uncertainty quantification, seismic risk assessment, and decision support" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Fig2_1.png" title="GEOTWINS modular digital twin framework" alt="GEOTWINS framework integrating seismic monitoring, reservoir modeling, uncertainty quantification, seismic risk assessment, and decision support" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Figure 1. GEOTWINS modular digital twin framework, connecting seismic monitoring, reservoir modeling, uncertainty quantification, risk assessment, and decision support. Source: <a href="https://deepgeothermal.org/about/geotwins/">GEOTWINS project website</a>.
+    Figure 1. GEOTWINS modular digital twin framework, connecting seismic monitoring, reservoir modeling, uncertainty quantification, risk assessment, and decision support.
 </div>
 
 This project is funded through the [Clean Energy Transition Partnership (CETPartnership)][funding] under its 2023 joint call, with co-funding from the European Union and participating national funding agencies. UNITN's participation is supported by the Italian Ministry of Enterprises and Made in Italy (MIMIT).
@@ -35,11 +35,3 @@ This project is funded through the [Clean Energy Transition Partnership (CETPart
 [deliverables]: https://deepgeothermal.org/outputs/deliverables/
 [validation]: https://deepgeothermal.org/activities/WP6/
 [funding]: https://deepgeothermal.org/about/funding/
-
-<!--
-Image note: the img field links to the original figure hosted by the GEOTWINS
-project website. To host the image locally, save that figure as
-assets/img/geotwins_overview.png and change img to that path. The figure above
-uses page.img, so only the front matter needs to be changed. Retain the source
-credit in the caption.
--->
