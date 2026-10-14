@@ -176,6 +176,11 @@ ninja.data = [{
           description: "Deep reinforcement learning-based optimal maintenance strategy for large-scale infrastructure networks under seismic risk",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-geotwins",
+          title: 'GEOTWINS',
+          description: "Uncertainty-aware digital twins and adaptive seismic risk management for deep geothermal energy",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
