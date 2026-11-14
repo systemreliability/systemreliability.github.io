@@ -1,5 +1,5 @@
 metadata:
-  last_updated: "2026-11-03 00:00:00"
+  last_updated: "2026-11-14 00:00:00"
   fetch_status: failed
   fetch_failed_at: "2026-05-04 04:12:40"
   fetch_error: All Google Scholar fetch retries failed
@@ -18,12 +18,12 @@ papers:
     title: Multi-scale seismic reliability assessment of networks by centrality-based
       selective recursive decomposition algorithm
     year: "2021"
-    citations: 26
+    citations: 27
   cLfMY9wAAAAJ:b0M2c_1WBrUC:
     title: "Seismic performance management of aging road facilities in Korea: Part
       2 - decision-making support technology and its application"
     year: "2024"
-    citations: 5
+    citations: 6
   cLfMY9wAAAAJ:tkaPQYYpVKoC:
     title: Dual graph-based Bayesian network modeling with Rao-Blackwellization for
       seismic reliability and complexity quantification of network connectivity
