@@ -39,3 +39,5 @@ latest_posts:
 - 도시 인프라 시스템을 위한 통계 및 머신러닝 기법의 활용
 
 [연구 성과](/ko/publications/)로 현재까지 국제 학술지 논문 5편과 22회의 학술대회 및 워크숍 발표(국내 7회, 국제 15회)를 수행하였습니다.
+
+[연구 작업공간](https://reliability-atlas-dl.tangy-civet-0382.chatgpt.site/)

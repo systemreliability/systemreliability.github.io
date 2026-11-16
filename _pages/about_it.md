@@ -39,3 +39,5 @@ La sua attività di ricerca si basa su un ampio background metodologico che comp
 - Applicazione di tecniche statistiche e di machine learning ai sistemi infrastrutturali urbani
 
 Ha presentato [i risultati delle sue ricerche](/it/publications/) attraverso 5 articoli pubblicati su riviste scientifiche peer-reviewed e 22 presentazioni a conferenze e workshop (7 nazionali e 15 internazionali).
+
+[Pannello di controllo della ricerca](https://reliability-atlas-dl.tangy-civet-0382.chatgpt.site/)

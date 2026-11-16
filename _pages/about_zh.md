@@ -39,3 +39,5 @@ latest_posts:
 - 统计与机器学习方法在城市基础设施系统中的应用
 
 迄今为止，他已通过5篇同行评审学术期刊论文和22次会议及研讨会报告（其中7次国内会议、15次国际会议）展示了[相关研究成果](/zh/publications/)。
+
+[研究工作空间](https://reliability-atlas-dl.tangy-civet-0382.chatgpt.site/)

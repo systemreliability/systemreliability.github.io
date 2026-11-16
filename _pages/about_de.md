@@ -39,3 +39,5 @@ Seine Forschung basiert auf einem breiten methodischen Hintergrund, der unter an
 - Anwendung statistischer Methoden und Verfahren des maschinellen Lernens auf urbane Infrastruktursysteme
 
 Er hat seine [Publikationen](/de/publications/) in fünf Artikeln in wissenschaftlichen Fachzeitschriften und in 22 Konferenz- und Workshopbeiträgen (sieben national und 15 international) präsentiert.
+
+[Forschungs-Dashboard](https://reliability-atlas-dl.tangy-civet-0382.chatgpt.site/)

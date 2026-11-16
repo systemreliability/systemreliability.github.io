@@ -38,3 +38,5 @@ He has a broad academical background in **Graph theory**, **Deep reinforcement l
 - Application of statistical/machine learning techniques for urban infrastructure systems
 
 He has presented [his research outcomes](/publications/) through 5 papers published in peer-reviewed archival journals, and 22 conference/workshop presentations (7 domestic, 15 international).
+
+[Research Workspace](https://reliability-atlas-dl.tangy-civet-0382.chatgpt.site/)
