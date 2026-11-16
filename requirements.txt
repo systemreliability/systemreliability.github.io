@@ -3,3 +3,5 @@ scholarly
 requests
 beautifulsoup4
 pyyaml
+# scholarly imports the bibtexparser 1.x API.
+bibtexparser>=1.4,<2
