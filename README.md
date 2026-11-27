@@ -1,3 +1,159 @@
+# Personal Google Scholar updates on macOS
+
+The website keeps its existing publication list, badges, and
+`site.data.citations.metadata/papers` interface. Google Scholar collection now
+runs **only on your personal Mac**. GitHub Actions continues to build/deploy the
+site and run offline tests; it never runs the Scholar collector.
+
+## What is fetched and stored
+
+Each live attempt first retrieves the current
+[robots.txt](https://scholar.google.com/robots.txt). Only if its applicable rules
+allow the exact URL, it retrieves
+[the basic public profile](https://scholar.google.com/citations?user=cLfMY9wAAAAJ&hl=en)
+once. There are no searches, pagination, publication-detail requests, redirects,
+browser automation, cookies, proxy rotation, Tor, CAPTCHA solving, or retries.
+Environment proxy settings are explicitly disabled.
+
+HTML is parsed for citations, h-index, i10-index (all-time and the displayed
+recent period), the annual citation chart, and citation counts of papers visible
+on the basic page. Detail/search links are parsed as identifiers only, never
+followed. Papers outside that page keep their previous values. The bibliography
+and badge templates are unchanged.
+
+Only after all validation succeeds, the updater atomically writes
+`_data/scholar_profile.json`, commits that file only, and pushes to `origin/main`.
+The JSON contains the existing `metadata` and `papers` objects plus `profile`,
+`metrics`, and `citations_by_year`. Each metric has `all` and `recent` values;
+`metrics.recent_label` records the displayed period.
+`metadata.observed_paper_ids` identifies which papers were refreshed.
+
+The original `_data/citations.yml` stays unchanged as a fallback. A Jekyll
+post-read hook overlays a validated JSON snapshot on the existing data interface.
+Do not create a second `_data/citations.json` with the same Jekyll data basename.
+The JSON path is included in the deployment trigger.
+
+HTTP 403/429, any non-200 status, redirects, CAPTCHA, denied/unreadable robots.txt,
+unexpected markup, missing/invalid fields, or inconsistent totals stop the
+attempt immediately. They do not overwrite data, update a success timestamp,
+commit, or push. A profile-wide lock prevents concurrent runs and an attempt
+record permits at most one live attempt per local calendar day, including failed
+attempts. Do not remove this record to retry a blocked request.
+
+## Installation (personal macOS)
+
+Use a **persistent, dedicated checkout**, not a temporary build folder. Install
+Python 3.10+ and Git first. Configure GitHub SSH or HTTPS credentials so
+`git fetch` and `git push` work non-interactively. For SSH, load the intended key
+into your normal macOS agent/Keychain; the updater does not handle passwords or
+create credentials.
+
+Example in a directory you choose:
+
+```bash
+git clone git@github.com:systemreliability/systemreliability.github.io.git
+cd systemreliability.github.io
+git switch main
+git pull --ff-only
+git config user.name "YOUR EXISTING GIT NAME"
+git config user.email "YOUR EXISTING GIT EMAIL"
+
+python3 -m venv .venv-scholar
+.venv-scholar/bin/python -m pip install -r bin/requirements-scholar.txt
+```
+
+The checkout must be clean and exactly match `origin/main`. The updater fetches
+that ref but deliberately does not merge, rebase, force-push, or include unrelated
+local commits. If you edit the website elsewhere, synchronize this checkout with
+`git pull --ff-only` before the next scheduled collection. A failed push leaves
+the single validated local commit for manual recovery, and subsequent runs stop
+rather than pushing unexpected history.
+
+## Initial manual run and compatibility check
+
+Run offline tests first; these use synthetic fixtures and never contact Scholar:
+
+```bash
+.venv-scholar/bin/python -m unittest discover -s test -p 'test_scholar*.py' -v
+bundle exec ruby test/scholar_profile_test.rb
+```
+
+Then perform **one** live, validated update from your Mac:
+
+```bash
+.venv-scholar/bin/python bin/update_scholar_citations.py --publish
+```
+
+Success prints the number of visible publications and the committed JSON path.
+Verify the JSON's `profile.user_id`, totals, annual counts, and observed paper
+counts against the basic profile content already available to you. Check
+`git show --stat HEAD`, the Actions deployment result, and the website's existing
+Scholar badges/update date. No live snapshot is seeded from a test fixture.
+An actual first run can be blocked by Scholar; a blocked run is not a successful
+extraction and must leave the existing website data in place.
+
+Without `--publish`, the command validates but does not change data or Git.
+This still consumes the day's live attempt; do not run a check followed by
+`--publish` on the same day. Wait until the next scheduled day.
+
+## Daily launchd job
+
+After the initial manual check, install a user LaunchAgent:
+
+```bash
+bash bin/install_scholar_launchd.sh 9 10
+```
+
+This schedules one run daily at 09:10 in the Mac's local timezone. The default
+without arguments is also 09:10. Installing does not run a collection immediately.
+The plist uses absolute paths and is written with `plistlib`, so checkout paths
+containing spaces work. Reinstall to change the time or checkout location.
+Use one persistent checkout per profile.
+
+The user must be logged in. launchd can coalesce missed calendar runs after sleep;
+it cannot collect while the Mac is powered off. The daily attempt guard prevents
+same-day duplication. No KeepAlive/restart loop is configured.
+
+## Status, logs, and errors
+
+```bash
+launchctl print "gui/$(id -u)/info.dongkyu-lee.scholar"
+tail -n 100 "$HOME/Library/Logs/PersonalScholarUpdater/stdout.log"
+tail -n 100 "$HOME/Library/Logs/PersonalScholarUpdater/stderr.log"
+git status --short
+```
+
+Logs include a UTC start/error timestamp. Attempt history and lock files live in
+`~/Library/Application Support/PersonalScholarUpdater/`; logs are local and
+never committed. On a network/robots/CAPTCHA/parsing failure, inspect the error
+and stop; do not use another IP, proxy, browser automation, or a detail/search URL.
+Unexpected markup requires a parser update and offline tests before another
+scheduled attempt. On a push failure, inspect the retained commit and reconcile
+remote changes manually; never force-push. Collection failures do not change the
+existing YAML/JSON status fields or paper counts.
+
+## Disable / remove automation
+
+```bash
+bash bin/uninstall_scholar_launchd.sh
+```
+
+This unloads the user LaunchAgent and removes its plist. It preserves data, logs,
+attempt history, and the local Python environment. The old GitHub collection
+workflow has no schedule or collection steps and is always skipped even if
+manually dispatched. The former publication fetch helper and Ruby Liquid tag now
+read the local cache only.
+
+## Validation scope
+
+The offline workflow covers robots precedence, the two-request limit, HTTP
+failures, redirect refusal, CAPTCHA, malformed/partial HTML, validation,
+preservation on failure, commit/push handling, and existing badge compatibility.
+It does not contact Google Scholar or establish that a particular Mac/IP will be
+allowed. The required first live macOS run is a separate installation check.
+
+---
+
 # al-folio
 
 <div align="center">

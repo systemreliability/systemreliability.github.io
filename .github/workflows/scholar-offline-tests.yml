@@ -1,0 +1,40 @@
+name: Scholar offline compatibility tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "bin/**"
+      - "test/**"
+      - "_plugins/*scholar*"
+      - ".github/workflows/scholar-offline-tests.yml"
+  pull_request:
+    paths:
+      - "bin/**"
+      - "test/**"
+      - "_plugins/*scholar*"
+      - ".github/workflows/scholar-offline-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -r bin/requirements-scholar.txt
+      - name: Offline parser, blocking and transaction tests
+        run: python -m unittest discover -s test -p 'test_scholar*.py' -v
+      - name: Shell syntax
+        run: bash -n bin/install_scholar_launchd.sh bin/uninstall_scholar_launchd.sh bin/run_fetch_scholar_citations.sh
+      - uses: ruby/setup-ruby@c4e5b1316158f92e3d49443a9d58b31d25ac0f8f
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+      - name: Existing citation display compatibility
+        run: bundle exec ruby test/scholar_profile_test.rb
