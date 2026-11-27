@@ -4,6 +4,7 @@ from email.message import Message
 import importlib.util
 import json
 import os
+import re
 from pathlib import Path
 import tempfile
 import unittest
@@ -75,11 +76,11 @@ class ScholarTests(unittest.TestCase):
         old = copy.deepcopy(PREVIOUS)
         old["papers"]["cLfMY9wAAAAJ:older"] = {"title": "Older", "year": "2000", "citations": 7}
         # Use 20 visible rows to model a first page with additional older papers.
-        expanded = HTML.replace("</tbody></table><button", "".join(
+        expanded = re.sub(r"</tbody>\s*</table>\s*<button", lambda match: "".join(
             '<tr class="gsc_a_tr"><td><a class="gsc_a_at" href="/citations?citation_for_view=cLfMY9wAAAAJ:extra' + str(i) +
             '">Extra</a></td><td class="gsc_a_c"><a class="gsc_a_ac"></a></td><td class="gsc_a_y">2025</td></tr>'
             for i in range(18)
-        ) + "</tbody></table><button")
+        ) + match.group(0), HTML)
         result = updater.parse_profile(expanded, old)
         self.assertEqual(old["papers"]["cLfMY9wAAAAJ:older"], result["papers"]["cLfMY9wAAAAJ:older"])
 
