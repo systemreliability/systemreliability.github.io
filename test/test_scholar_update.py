@@ -2,7 +2,7 @@
 import copy
 from email.message import Message
 import importlib.util
-import json
+import yaml
 import os
 import re
 from pathlib import Path
@@ -149,7 +149,7 @@ class ScholarTests(unittest.TestCase):
             repo = Path(temporary) / "repo"
             (repo / "_data").mkdir(parents=True)
             target = repo / updater.OUTPUT
-            target.write_text(json.dumps(PREVIOUS))
+            target.write_text(yaml.safe_dump(PREVIOUS))
             original = target.read_bytes()
             with patch.object(updater.sys, "platform", "darwin"), patch.dict(os.environ, {}, clear=True), \
                  patch.object(updater.Path, "home", return_value=Path(temporary)), \
@@ -173,12 +173,12 @@ class ScholarTests(unittest.TestCase):
                 updater.run(ROOT, True)
             collect.assert_not_called()
 
-    def test_commit_failure_restores_previous_json(self):
+    def test_commit_failure_restores_previous_yaml(self):
         with tempfile.TemporaryDirectory() as temporary:
             repo = Path(temporary)
             (repo / "_data").mkdir()
             target = repo / updater.OUTPUT
-            target.write_text(json.dumps(PREVIOUS))
+            target.write_text(yaml.safe_dump(PREVIOUS))
             original = target.read_bytes()
 
             def fake_git(repo, *args):
@@ -208,7 +208,7 @@ class ScholarTests(unittest.TestCase):
             with patch.object(updater, "git", side_effect=fake_git):
                 with self.assertRaises(updater.UpdateError):
                     updater.publish(repo, result, "HEAD")
-            self.assertEqual(result, json.loads((repo / updater.OUTPUT).read_text()))
+            self.assertEqual(result, yaml.safe_load((repo / updater.OUTPUT).read_text()))
 
     def test_existing_real_yaml_is_accepted(self):
         data = updater.load_existing(ROOT)

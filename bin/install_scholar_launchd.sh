@@ -25,7 +25,7 @@ job = {
     "Label": label,
     "ProgramArguments": [root + "/.venv-scholar/bin/python", root + "/bin/update_scholar_citations.py", "--repo", root, "--publish"],
     "WorkingDirectory": root,
-    "StartCalendarInterval": {"Hour": hour, "Minute": minute},
+    "StartCalendarInterval": {"Weekday": 1, "Hour": hour, "Minute": minute},
     "RunAtLoad": False,
     "ProcessType": "Background",
     "StandardOutPath": str(logs / "stdout.log"),
@@ -45,5 +45,5 @@ PY
 plutil -lint "$PLIST"
 launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST"
-echo "Installed $LABEL daily at $HOUR:$MINUTE in macOS local time."
+echo "Installed $LABEL every Monday at $HOUR:$MINUTE in macOS local time."
 echo "No initial fetch performed. Run the documented manual --publish check once."

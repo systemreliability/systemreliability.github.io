@@ -6,7 +6,6 @@ on:
       - master
       - main
     paths:
-      - "_data/scholar_profile.json"
       - "_plugins/**"
       - "assets/**"
       - "_sass/**"
@@ -37,7 +36,6 @@ on:
       - master
       - main
     paths:
-      - "_data/scholar_profile.json"
       - "_plugins/**"
       - "assets/**"
       - "_sass/**"

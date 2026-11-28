@@ -22,16 +22,13 @@ followed. Papers outside that page keep their previous values. The bibliography
 and badge templates are unchanged.
 
 Only after all validation succeeds, the updater atomically writes
-`_data/scholar_profile.json`, commits that file only, and pushes to `origin/main`.
-The JSON contains the existing `metadata` and `papers` objects plus `profile`,
+`_data/citations.yml`, commits that file only, and pushes to `origin/main`.
+The YAML contains the existing `metadata` and `papers` objects plus `profile`,
 `metrics`, and `citations_by_year`. Each metric has `all` and `recent` values;
 `metrics.recent_label` records the displayed period.
 `metadata.observed_paper_ids` identifies which papers were refreshed.
 
-The original `_data/citations.yml` stays unchanged as a fallback. A Jekyll
-post-read hook overlays a validated JSON snapshot on the existing data interface.
-Do not create a second `_data/citations.json` with the same Jekyll data basename.
-The JSON path is included in the deployment trigger.
+Jekyll reads this YAML file directly as `site.data.citations`. Changes to it trigger deployment.
 
 HTTP 403/429, any non-200 status, redirects, CAPTCHA, denied/unreadable robots.txt,
 unexpected markup, missing/invalid fields, or inconsistent totals stop the
@@ -84,8 +81,8 @@ Then perform **one** live, validated update from your Mac:
 .venv-scholar/bin/python bin/update_scholar_citations.py --publish
 ```
 
-Success prints the number of visible publications and the committed JSON path.
-Verify the JSON's `profile.user_id`, totals, annual counts, and observed paper
+Success prints the number of visible publications and the committed YAML path.
+Verify the YAML file's `profile.user_id`, totals, annual counts, and observed paper
 counts against the basic profile content already available to you. Check
 `git show --stat HEAD`, the Actions deployment result, and the website's existing
 Scholar badges/update date. No live snapshot is seeded from a test fixture.
@@ -96,7 +93,7 @@ Without `--publish`, the command validates but does not change data or Git.
 This still consumes the day's live attempt; do not run a check followed by
 `--publish` on the same day. Wait until the next scheduled day.
 
-## Daily launchd job
+## Weekly launchd job
 
 After the initial manual check, install a user LaunchAgent:
 
@@ -104,7 +101,7 @@ After the initial manual check, install a user LaunchAgent:
 bash bin/install_scholar_launchd.sh 9 10
 ```
 
-This schedules one run daily at 09:10 in the Mac's local timezone. The default
+This schedules one run every Monday at 09:10 in the Mac's local timezone. The default
 without arguments is also 09:10. Installing does not run a collection immediately.
 The plist uses absolute paths and is written with `plistlib`, so checkout paths
 containing spaces work. Reinstall to change the time or checkout location.
@@ -130,7 +127,7 @@ and stop; do not use another IP, proxy, browser automation, or a detail/search U
 Unexpected markup requires a parser update and offline tests before another
 scheduled attempt. On a push failure, inspect the retained commit and reconcile
 remote changes manually; never force-push. Collection failures do not change the
-existing YAML/JSON status fields or paper counts.
+existing YAML status fields or paper counts.
 
 ## Disable / remove automation
 

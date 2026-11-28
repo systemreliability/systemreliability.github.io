@@ -8,7 +8,6 @@ import argparse
 import copy
 from datetime import datetime, timezone, date
 import fcntl
-import json
 import os
 from pathlib import Path
 import re
@@ -25,8 +24,7 @@ AUTHOR_ID = "cLfMY9wAAAAJ"
 PROFILE_URL = "https://scholar.google.com/citations?user=" + AUTHOR_ID + "&hl=en"
 ROBOTS_URL = "https://scholar.google.com/robots.txt"
 USER_AGENT = "PersonalScholarUpdater/1.0"
-OUTPUT = Path("_data/scholar_profile.json")
-BASELINE = Path("_data/citations.yml")
+OUTPUT = Path("_data/citations.yml")
 MAX_BYTES = 2_000_000
 
 
@@ -164,9 +162,7 @@ def validate_saved(data):
 
 
 def load_existing(repo):
-    source = repo / OUTPUT if (repo / OUTPUT).exists() else repo / BASELINE
-    text = source.read_text(encoding="utf-8")
-    data = json.loads(text) if source.suffix == ".json" else yaml.safe_load(text)
+    data = yaml.safe_load((repo / OUTPUT).read_text(encoding="utf-8"))
     return validate_saved(data)
 
 
@@ -324,7 +320,7 @@ def atomic_write(path, data):
     fd, temporary = tempfile.mkstemp(prefix=".scholar-", dir=path.parent)
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as stream:
-            stream.write(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+            yaml.safe_dump(data, stream, allow_unicode=True, sort_keys=False)
             stream.flush()
             os.fsync(stream.fileno())
         os.replace(temporary, path)
@@ -390,7 +386,7 @@ def run(repo, publish_data=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument("--publish", action="store_true", help="Write validated JSON, commit and push")
+    parser.add_argument("--publish", action="store_true", help="Write validated YAML, commit and push")
     args = parser.parse_args()
     try:
         print(datetime.now(timezone.utc).isoformat(), "Starting basic-profile collection", flush=True)
