@@ -138,7 +138,11 @@ def fetch(url, opener):
         body = response.read(limit + 1)
         if len(body) > limit:
             raise UpdateError("Response too large")
-        return body.decode("utf-8", errors="strict")
+        # Scholar may serve localized HTML in a declared legacy encoding.
+        encoding = "utf-8-sig"
+        if url == PROFILE_URL:
+            encoding = response.headers.get_content_charset() or "utf-8"
+        return body.decode(encoding, errors="strict")
 
 
 def validate_saved(data):
