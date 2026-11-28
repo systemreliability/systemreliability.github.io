@@ -84,6 +84,16 @@ class ScholarTests(unittest.TestCase):
         result = updater.parse_profile(expanded, old)
         self.assertEqual(old["papers"]["cLfMY9wAAAAJ:older"], result["papers"]["cLfMY9wAAAAJ:older"])
 
+    def test_smaller_complete_profile_preserves_old_papers(self):
+        previous = copy.deepcopy(PREVIOUS)
+        previous["papers"]["cLfMY9wAAAAJ:older"] = {"title": "Archived", "year": "2000", "citations": 1}
+        html = HTML.replace("</body>", '<span id="gsc_a_nn">Articles 1–2</span></body>')
+        result = updater.parse_profile(html, previous)
+        self.assertEqual(3, len(result["papers"]))
+        self.assertEqual(2, len(result["metadata"]["observed_paper_ids"]))
+        with self.assertRaises(updater.UpdateError):
+            updater.parse_profile(html.replace("1–2", "1–3"), previous)
+
     def test_exact_two_requests_no_following_links(self):
         opener = Opener()
         updater.collect(PREVIOUS, opener)

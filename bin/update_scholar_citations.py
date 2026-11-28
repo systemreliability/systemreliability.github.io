@@ -237,6 +237,12 @@ def parse_profile(html, previous, now=None):
         citations = 0 if count_text == "" else integer(count_text)
         visible[paper_id] = {"title": title, "year": year, "citations": citations}
     minimum = min(len(previous["papers"]), 20)
+    range_node = soup.select_one("#gsc_a_nn")
+    if range_node is not None:
+        page_range = re.fullmatch(r"(?:Articles\s+)?1\s*[–-]\s*(\d+)", range_node.get_text(" ", strip=True))
+        if not page_range or int(page_range[1]) != len(visible):
+            raise UpdateError("Displayed article range does not match the parsed rows")
+        minimum = 1
     if not visible or len(visible) < minimum:
         raise UpdateError("Publication table is incomplete; old data retained")
     total = metrics["citations"]["all"]
