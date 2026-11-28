@@ -5,8 +5,8 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 LABEL="info.dongkyu-lee.scholar"
 PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
-HOUR=9
-MINUTE=10
+HOUR=13
+MINUTE=0
 if [[ $# -ge 1 ]]; then HOUR="$1"; fi
 if [[ $# -ge 2 ]]; then MINUTE="$2"; fi
 PYTHON="$(command -v python3)"
@@ -45,5 +45,5 @@ PY
 plutil -lint "$PLIST"
 launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST"
-echo "Installed $LABEL every Monday at $HOUR:$MINUTE in macOS local time."
+printf 'Installed %s every Monday at %02d:%02d in macOS local time.\n' "$LABEL" "$((10#$HOUR))" "$((10#$MINUTE))"
 echo "No initial fetch performed. Run the documented manual --publish check once."

@@ -98,11 +98,11 @@ This still consumes the day's live attempt; do not run a check followed by
 After the initial manual check, install a user LaunchAgent:
 
 ```bash
-bash bin/install_scholar_launchd.sh 9 10
+bash bin/install_scholar_launchd.sh
 ```
 
-This schedules one run every Monday at 09:10 in the Mac's local timezone. The default
-without arguments is also 09:10. Installing does not run a collection immediately.
+The default schedule is every Monday at 13:00 in the Mac's local timezone
+(Europe/Rome on the configured Mac). Pass an hour and minute to override it. Installing does not run a collection immediately.
 The plist uses absolute paths and is written with `plistlib`, so checkout paths
 containing spaces work. Reinstall to change the time or checkout location.
 Use one persistent checkout per profile.
